@@ -1,13 +1,63 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&family=Sorts+Mill+Goudy&display=swap');
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  font-family: 'Open Sans';
+  font-style: normal;
+  min-height: 100vh;
+}
+li {
+  list-style-type: none; /* Убираем маркеры */
+}
+a {
+  text-decoration: none;
+  color: #000000;
+}
+.btn-primary {
+  cursor: pointer;
+  padding: 14px 42px;
+  background: #ffffff;
+  border: 1px solid #000000;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+#root {
+  display: flex;
+  justify-content: center;
+}
+
+img {
+  max-width: 100%;
+}
+
+.border-bottom {
+  border-bottom: 2px solid black;
+}
+.border-top {
+  border-top: 2px solid black;
+}
+.border-left {
+  border-left: 2px solid black;
+}
+.border-right {
+  border-right: 2px solid black;
+}
+
+.flex-direction-column {
+  flex-direction: column;
+}
+.d-flex {
+  display: flex;
+}
+.align-items-center {
+  align-items: center;
+}
+
+.justify-content-space-around {
+  justify-content: space-around;
+}
+
+
+.text-align-center {
+  text-align: center;
 }
