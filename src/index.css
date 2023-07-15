@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans&family=Sorts+Mill+Goudy&display=swap');
+
 body {
   margin: 0;
   -webkit-font-smoothing: antialiased;
@@ -7,13 +8,17 @@ body {
   font-style: normal;
   min-height: 100vh;
 }
+
 li {
-  list-style-type: none; /* Убираем маркеры */
+  list-style-type: none;
+  /* Убираем маркеры */
 }
+
 a {
   text-decoration: none;
   color: #000000;
 }
+
 .btn-primary {
   cursor: pointer;
   padding: 14px 42px;
@@ -30,15 +35,19 @@ img {
   max-width: 100%;
 }
 
+
 .border-bottom {
   border-bottom: 2px solid black;
 }
+
 .border-top {
   border-top: 2px solid black;
 }
+
 .border-left {
   border-left: 2px solid black;
 }
+
 .border-right {
   border-right: 2px solid black;
 }
@@ -46,9 +55,15 @@ img {
 .flex-direction-column {
   flex-direction: column;
 }
+
 .d-flex {
   display: flex;
 }
+
+.d-none {
+  display: none;
+}
+
 .align-items-center {
   align-items: center;
 }
@@ -60,4 +75,14 @@ img {
 
 .text-align-center {
   text-align: center;
+}
+
+
+@media only screen and (max-width: 600px) {
+  .slide_header {
+    font-size: 32px;
+    font-family: Sorts Mill Goudy;
+    line-height: 55px;
+    height: 50px;
+  }
 }

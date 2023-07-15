@@ -1,7 +1,7 @@
 import Header from '../components/Header';
 import BlogSlide from '../components/BlogSlide';
 import './Blog.css';
-
+import { useMediaQuery } from 'react-responsive';
 const styles = {
   text_big: {
     fontFamily: 'Sorts Mill Goudy',
@@ -10,64 +10,110 @@ const styles = {
     fontSize: 76,
     lineHeight: '109px',
   },
+  text_big_mobile: {
+    fontFamily: 'Sorts Mill Goudy',
+    fontStyle: 'normal',
+    fontWeight: 400,
+    fontSize: "40px",
+    lineHeight: '58px',
+
+  }
 };
 
 export default function Blog() {
+  const isTablet = useMediaQuery({ query: '(max-width: 934px)' });
+  const isMobile = useMediaQuery({ query: '(max-width: 600px)' });
   return (
     <div
       className='blog'
       style={{ maxWidth: 1920 }}
     >
       <Header position='right'></Header>
-      <div>
-        <div className='slide header_slide border-top slide_content'>
-          <div v>
-            <div id='header_main_text'>
-              <div>
-                <span>
-                  Hi! This is my travel blog with{' '}
+      <div id="content">
+        <div className='header_slide  slide_content'>
+          {!isTablet ?
+            <div>
+              <div id='header_main_text'>
+                <div>
+                  <span>
+                    Hi! This is my travel blog with{' '}
+                    <img
+                      alt='background'
+                      src='./img/blog/header_text_1.png'
+                      className='text_img'
+                    ></img>
+                  </span>
+                </div>
+              </div>
+              <div
+                id='header_sub_text'
+                className='d-flex align-items-center'
+              >
+                <div className='d-flex align-items-center'>
                   <img
                     alt='background'
-                    src='./img/blog/header_text_1.png'
+                    src='./img/blog/header_text_2.png'
                     className='text_img'
                   ></img>
-                </span>
+                  <span style={{ paddingLeft: 20 }}> funny stories.</span>
+                </div>
+                <div id='description'>
+                  There is always something interesting
+                  <br /> happening while traveling. And I think
+                  <br /> it's impossible not to tell.
+                </div>
               </div>
             </div>
-            <div
-              id='header_sub_text'
-              className='d-flex align-items-center'
-            >
-              <div className='d-flex align-items-center'>
-                <img
-                  alt='background'
-                  src='./img/blog/header_text_2.png'
-                  className='text_img'
-                ></img>
-                <span style={{ paddingLeft: 20 }}> funny stories.</span>
+            :
+            <div style={{ marginTop: 70}}>
+              <div id='header_main_text'>
+                <div style={{ textAlign: "center" }}>
+                  <span>
+                    Hi! This is {' '}
+                    <img
+                      alt='background'
+                      src='./img/blog/header_text_1.png'
+                      className='text_img'
+                    ></img>
+                  </span><br />
+                  <span>my travel blog with</span><br />
+                  <span> <img
+                    alt='background'
+                    src='./img/blog/header_text_2.png'
+                    className='text_img'
+                  ></img> funny stories.</span><br />
+                </div>
+                <div id='description'>
+                  There is always something interesting
+                  <br /> happening while traveling. And I think
+                  <br /> it's impossible not to tell.
+                </div>
               </div>
-              <div id='description'>
-                There is always something interesting
-                <br /> happening while traveling. And I think
-                <br /> it's impossible not to tell.
-              </div>
-            </div>
-          </div>
 
+            </div>
+          }
           <div>
-            <img
-              alt='background'
-              src='./img/blog/header_back.png'
+            {isMobile ? <div
+              style={{
+                background: `no-repeat center/100% url('./img/blog/header_small.png')`,
+                height: 413
+              }}
               className='border-bottom'
-            ></img>
+            ></div> :
+              <img
+                alt='background'
+                src='./img/blog/header_back.png'
+                className='border-bottom'
+              ></img>}
           </div>
         </div>
         <BlogSlide
           position='right'
           text="Sometimes it's important to just relax not to think about what others think and do what you want."
           img='india_main'
+          slide="india"
         >
-          <div style={styles.text_big}>
+          <div style={isMobile ? styles.text_big_mobile : styles.text_big}>
             <span>
               Unforgettable{' '}
               <img
@@ -91,24 +137,25 @@ export default function Blog() {
           position='left'
           text='Animals love to have fun too. Let me prove it to you.'
           img='penguin_main'
+          slide="penguin"
         >
-          <div style={styles.text_big}>
+          <div style={isMobile ? styles.text_big_mobile : styles.text_big}>
             <span>
-            How I became {' '}
+              How I became {' '}
               <img
                 alt='background'
                 src='./img/blog/penguin_small_1.png'
                 className='text_img'
               ></img>{' '}
               <br />
-              friends with one 
+              friends with one
               <br />
               <img
                 alt='background'
                 src='./img/blog/penguin_small_2.png'
                 className='text_img'
               ></img>{' '}
-               penguin{' '}
+              penguin{' '}
             </span>
           </div>
 
@@ -118,10 +165,11 @@ export default function Blog() {
           position='right'
           text='Laughter will always help to get out of any situation. A sense of humor is definitely the most important thing in our life.'
           img='life_main'
+          slide="life"
         >
-         <div style={styles.text_big}>
+          <div style={isMobile ? styles.text_big_mobile : styles.text_big}>
             <span>
-            A happy life  {' '}
+              A happy life  {' '}
               <img
                 alt='background'
                 src='./img/blog/life_small_1.png'
@@ -135,7 +183,7 @@ export default function Blog() {
                 src='./img/blog/life_small_2.png'
                 className='text_img'
               ></img>{' '}
-               laughter{' '}
+              laughter{' '}
             </span>
           </div>
         </BlogSlide>
@@ -143,25 +191,26 @@ export default function Blog() {
           position='left'
           text='You can’t even guess how one white lady took and changed my day 180 degrees.'
           img='moments_main'
+          slide="moment"
         >
 
-          <div style={styles.text_big}>
+          <div style={isMobile ? styles.text_big_mobile : styles.text_big}>
             <span>
-            Unexpected  {' '}
+              Unexpected  {' '}
               <img
                 alt='background'
                 src='./img/blog/moments_small_1.png'
                 className='text_img'
               ></img>{' '}
               <br />
-              moments bring  
+              moments bring
               <br />
               <img
                 alt='background'
                 src='./img/blog/moments_small_2.png'
                 className='text_img'
               ></img>{' '}
-               lives{' '}
+              lives{' '}
             </span>
           </div>
         </BlogSlide>

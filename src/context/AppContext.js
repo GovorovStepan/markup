@@ -2,19 +2,12 @@ import React, { createContext, useReducer } from 'react';
 
 export const AppReducer = (state, action) => {
   switch (action.type) {
-    case 'TOOGLE_INDICATOR':
+    case 'SET_COLLECTION_FILTER':
       action.type = 'DONE';
-      state.indicator = !state.indicator;
+      state.collection_filter = action.payload;
       return {
         ...state,
       };
-    case 'SET_HEADER':
-      action.type = 'DONE';
-      state.header = action.payload;
-      return {
-        ...state,
-      };
-
     default:
       return state;
   }
@@ -22,8 +15,7 @@ export const AppReducer = (state, action) => {
 
 // 1. Sets the initial state when the app loads
 const initialState = {
-  indicator: false,
-  header: 'Easy-Roads'
+  collection_filter: 'all'
 };
 
 // 2. Creates the context this is the thing our components import and use to get the state
@@ -38,8 +30,7 @@ export const AppProvider = (props) => {
   return (
     <AppContext.Provider
       value={{
-        indicator: state.indicator,
-        header: state.header,
+        collection_filter: state.collection_filter,
         dispatch,
       }}
     >

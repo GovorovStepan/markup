@@ -26,7 +26,21 @@ const styles = {
   },
 };
 
-export default function BlogCard({ header, img, text }) {
+export default function BlogCard({ header, img, text, size = "normal" }) {
+
+  switch (size) {
+    case "mid":
+      styles.container =  {
+        border: '2px solid #000000',
+        maxWidth: 350,
+      }
+      styles.img_wrapper =  {
+        padding: '20px 0',
+        maxWidth: 300,
+      }
+      break;
+  
+  }
   return (
     <div
       style={styles.container}
@@ -36,7 +50,7 @@ export default function BlogCard({ header, img, text }) {
         <img alt="background" src={'./img/main/blog/' + img}></img>
       </div>
       <div style={styles.text_wrapper}>
-        <article>
+        <article style={{padding: 0}}>
           <header style={styles.header}>{header}</header>
           <p style={styles.text}>{text}</p>
         </article>

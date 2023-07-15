@@ -5,6 +5,7 @@
   font-size: 76px;
   line-height: 109px;
 }
+
 .main_first_text p {
   font-family: 'Open Sans';
   font-style: normal;
@@ -12,13 +13,35 @@
   font-size: 24px;
   line-height: 33px;
 }
+
 .slide_header {
   font-family: 'Sorts Mill Goudy';
   font-style: normal;
   font-weight: 400;
   font-size: 60px;
-  line-height: 86px;
+  line-height: 100px;
   height: 100px;
+}
+
+.slide_header_mid {
+  padding-left: 20%;
+  font-family: 'Sorts Mill Goudy';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 60px;
+  line-height: 100px;
+  height: 100px;
+}
+
+.slide_header_sm {
+  font-family: 'Sorts Mill Goudy';
+  font-style: normal;
+  font-size: 32px;
+  padding-left: 10%;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  height: 50px;
 }
 
 .first_slide .text_img {
@@ -35,6 +58,35 @@
   margin-top: 150px;
 }
 
+.first_slide_text_mid {
+  margin-left: 0;
+  margin-top: 80px;
+}
+
+.first_slide_text_sm {
+  margin-left: 0;
+  margin-top: 80px;
+
+}
+
+.first_slide_text_sm span {
+  font-family: Sorts Mill Goudy;
+  font-size: 40px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+
+}
+
+.first_slide_text_sm p {
+  font-family: Open Sans;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+
+}
+
 .main_first_img {
   max-width: 845px;
   border-right: 2px solid black;
@@ -43,6 +95,7 @@
 .second_slide {
   flex-direction: column;
 }
+
 .second_slide .slide_header {
   padding-left: 9%;
   padding-top: 0.3rem;
@@ -95,6 +148,14 @@
   line-height: 86px;
 }
 
+.article_font_big_sm {
+  font-family: Sorts Mill Goudy;
+  font-size: 32px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
 .article_font_medium {
   flex-direction: column;
   font-family: 'Open Sans';
@@ -102,6 +163,22 @@
   font-weight: 400;
   font-size: 26px;
   line-height: 35px;
+}
+.article_font_medium_sm{
+  flex-direction: column;
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: normal;
+}
+
+.article_font_sm {
+  font-family: Sorts Mill Goudy;
+  font-size: 32px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
 }
 
 #main_forth_slide_content {
@@ -135,12 +212,29 @@
 .main_seventh_slide_block {
   min-width: 170px;
 }
+
 #seventh_article_1 {
   padding-top: 140px;
 }
 
+#seventh_article_1_mid {
+  padding-top: 140px;
+}
+#seventh_article_1_sm {
+  padding-top: 70px;
+}
+
 #seventh_article_2 {
   padding-bottom: 140px;
+}
+
+#seventh_article_2_mid {
+  padding-top: 75px;
+  padding-bottom: 140px;
+}
+#seventh_article_2_sm {
+  padding-top: 25px;
+  padding-bottom: 70px;
 }
 
 .eight_slide .slide_header {
@@ -178,12 +272,14 @@
   padding-top: 100px;
   padding-bottom: 60px;
 }
+
 .tenth_slide {
   min-height: 376px;
   font-family: 'Open Sans';
   font-style: normal;
   font-weight: 400;
 }
+
 .tenth_slide .slide_header {
   padding-left: 25%;
   padding-top: 0.3rem;
@@ -227,53 +323,52 @@
   align-items: flex-end;
   justify-content: flex-end;
   transition: all 0.5s;
-  background: no-repeat center/100%
-  url('../../public/img/main/collection/collection_white_1.png');
+  background: no-repeat center/100% url('../../public/img/main/collection/collection_white_1.png');
 }
+
 #collection_all span {
   margin-right: 78px;
   margin-bottom: 100px;
 }
+
 #collection_all:hover {
-  background: no-repeat center/100%
-    url('../../public/img/main/collection/collection_all.png');
+  background: no-repeat center/100% url('../../public/img/main/collection/collection_all.png');
   transition: all 0.5s;
 }
-
 
 #collection_view {
   display: flex;
   align-items: flex-end;
   justify-content: flex-end;
   transition: all 0.5s;
-  background: no-repeat center/100%
-  url('../../public/img/main/collection/collection_white_2.png');
+  background: no-repeat center/100% url('../../public/img/main/collection/collection_white_2.png');
 }
+
 #collection_view span {
   margin-right: 78px;
   margin-bottom: 100px;
 }
+
 #collection_view:hover {
   transition: all 0.5s;
-  background: no-repeat center/100%
-    url('../../public/img/main/collection/collection_view.png');
+  background: no-repeat center/100% url('../../public/img/main/collection/collection_view.png');
 }
 
 
 #collection_animal {
   display: flex;
   transition: all 0.5s;
-  background: no-repeat center/100%
-  url('../../public/img/main/collection/collection_white_3.png');
+  background: no-repeat center/100% url('../../public/img/main/collection/collection_white_3.png');
 }
+
 #collection_animal span {
   margin-left: 78px;
   margin-top: 140px;
 }
+
 #collection_animal:hover {
   transition: all 0.5s;
-  background: no-repeat center/100%
-    url('../../public/img/main/collection/collection_animal.png');
+  background: no-repeat center/100% url('../../public/img/main/collection/collection_animal.png');
 }
 
 #collection_texture {
@@ -281,17 +376,17 @@
   align-items: flex-end;
   justify-content: flex-end;
   transition: all 0.5s;
-  background: no-repeat center/100%
-  url('../../public/img/main/collection/collection_white_4.png');
+  background: no-repeat center/100% url('../../public/img/main/collection/collection_white_4.png');
 }
+
 #collection_texture span {
   margin-right: 78px;
   margin-bottom: 100px;
 }
+
 #collection_texture:hover {
   transition: all 0.5s;
-  background: no-repeat center/100%
-    url('../../public/img/main/collection/collection_texture.png');
+  background: no-repeat center/100% url('../../public/img/main/collection/collection_texture.png');
 }
 
 #collection span {

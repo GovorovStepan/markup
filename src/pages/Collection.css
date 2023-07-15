@@ -1,0 +1,63 @@
+.header_slide p {
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 33px;
+  max-width: 445px;
+}
+
+#header_middle {
+  padding-left: 200px;
+  padding-right: 224px;
+}
+
+
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+  #header_small {
+    font-size: 40px;
+    font-family: Sorts Mill Goudy;
+    display: flex;
+    justify-content: center;
+
+  }
+
+  .header_slide p {
+    font-size: 18px;
+    max-width: 280px;
+  }
+
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) and (max-width: 1300px) {
+  #header_left_bg {
+    height: 729px;
+    width: 257px;
+  }
+
+  #header_middle {
+    padding-left: 30px;
+    padding-right: 10px;
+  }
+
+  .header_slide article {
+    margin-bottom: 100px;
+    padding-left: 0;
+  }
+
+  .collection .text_img {
+    max-height: 60px;
+  }
+
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 1300px) {
+  .header_slide article {
+    margin-top: 150px;
+  }
+
+}
