@@ -39,7 +39,7 @@ export default function BlogSlide({ position, text, img, slide, children }) {
       };
     } else {
       styles.wrapper = {
-        // flexDirection: 'row-reverse',
+        flexDirection: 'row-reverse',
       };
       styles.text = {
         marginTop: 150,
@@ -89,7 +89,7 @@ export default function BlogSlide({ position, text, img, slide, children }) {
               <div>
                 <p style={styles.text_min}>{text}</p>
               </div>
-              <button className='btn-primary'>Application</button>
+              <button className='btn-primary' onClick={() => openBlog(slide)} >Application</button>
             </article>
           </div>
         </div>
