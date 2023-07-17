@@ -163,7 +163,7 @@ export default function Header({ position }) {
   } else {
     if (position === 'right') {
       styles.nav = {
-        marginRight: 175,
+        marginRight: 30,
         height: 90,
         display: 'flex',
         justifyContent: 'flex-end',
@@ -173,7 +173,7 @@ export default function Header({ position }) {
       };
     } else {
       styles.nav = {
-        marginLeft: 175,
+        marginLeft: 30,
         height: 90,
         display: 'flex',
         justifyContent: 'flex-start',

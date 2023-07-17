@@ -53,7 +53,7 @@ export default function Main() {
                   <br />
                   <span>wandering around</span>
                   <br />
-                  <span>
+                  <span > 
                     <img
                       alt='background'
                       src='./img/main/main_first_slide_text_2.png'
@@ -196,7 +196,7 @@ export default function Main() {
               fontWeight: 400,
             }} > You can download my photos and use them in your project</div>
             <div>
-              <div className="border-top" style={{ display: "flex", justifyContent: "center" }} onClick={() => changeFilter('landscapes')}><span style={{
+              <div className="border-top" style={{ display: "flex", justifyContent: "center" }} onClick={() => changeFilter('all')}><span style={{
                 padding: "40px 0", fontFamily: "Open Sans", fontSize: "24px",
                 fontStyle: "normal", lineHeight: "normal",
                 fontWeight: 400
@@ -305,28 +305,24 @@ export default function Main() {
                 className='d-flex justify-content-space-around'
               >
                 <BlogCard
-                  header='Name article'
+                  header='Adventure in India'
                   img='main_1.png'
-                  text='You can buy my photos and use them in your project. You can buy my photos and use them in your project'
-                  size="mid"
+                  text="Sometimes it's important to just relax not to think about what others think and do what you want."
                 />
                 <BlogCard
                   img='main_2.png'
-                  header='Name article'
-                  text='You can buy my photos and use them in your project. You can buy my photos and use them in your project'
-                  size="mid"
+                  header='Friend penguin'
+                  text='Animals love to have fun too. Let me prove it to you.'
                 />
                 <BlogCard
                   img='main_3.png'
-                  header='Name article'
-                  text='You can buy my photos and use them in your project. You can buy my photos and use them in your project'
-                  size="mid"
+                  header='Happiest is laughter'
+                  text='Laughter will always help to get out of any situation. A sense of humor is definitely the most important thing in our life.'
                 />
                 <BlogCard
                   img='main_4.png'
-                  header='Name article'
-                  text='You can buy my photos and use them in your project. You can buy my photos and use them in your project'
-                  size="mid"
+                  header='Unexpected moments'
+                  text='You can’t even guess how one white lady took and changed my day 180 degrees.'
                 />
               </div>
               <div style={{ textAlign: "center" }}>
@@ -395,7 +391,7 @@ export default function Main() {
                       ></img>
                     </span>
                     <br />
-                    <span>wandering around</span>
+                    <span>wandering around </span> {' '}
                     <br />
                     <span>
                       <img
@@ -540,7 +536,7 @@ export default function Main() {
                 fontWeight: 400,
               }} > You can download my photos and use them in your project</div>
               <div>
-                <div className="border-top" style={{ display: "flex", justifyContent: "center" }} onClick={() => changeFilter('landscapes')}><span style={{
+                <div className="border-top" style={{ display: "flex", justifyContent: "center" }} onClick={() => changeFilter('all')}><span style={{
                   padding: "75px 0", fontFamily: "Open Sans", fontSize: "40px",
                   fontStyle: "normal", lineHeight: "normal",
                   fontWeight: 400
@@ -658,28 +654,24 @@ export default function Main() {
                 className='d-flex justify-content-space-around'
               >
                 <BlogCard
-                  header='Name article'
+                  header='Adventure in India'
                   img='main_1.png'
-                  text='You can buy my photos and use them in your project. You can buy my photos and use them in your project'
-                  size="mid"
+                  text="Sometimes it's important to just relax not to think about what others think and do what you want."
                 />
                 <BlogCard
                   img='main_2.png'
-                  header='Name article'
-                  text='You can buy my photos and use them in your project. You can buy my photos and use them in your project'
-                  size="mid"
+                  header='Friend penguin'
+                  text='Animals love to have fun too. Let me prove it to you.'
                 />
                 <BlogCard
                   img='main_3.png'
-                  header='Name article'
-                  text='You can buy my photos and use them in your project. You can buy my photos and use them in your project'
-                  size="mid"
+                  header='Happiest is laughter'
+                  text='Laughter will always help to get out of any situation. A sense of humor is definitely the most important thing in our life.'
                 />
                 <BlogCard
                   img='main_4.png'
-                  header='Name article'
-                  text='You can buy my photos and use them in your project. You can buy my photos and use them in your project'
-                  size="mid"
+                  header='Unexpected moments'
+                  text='You can’t even guess how one white lady took and changed my day 180 degrees.'
                 />
               </div>
               <div style={{ textAlign: "center" }}>
@@ -752,9 +744,9 @@ export default function Main() {
                       ></img>
                     </span>
                     <br />
-                    <span>wandering around</span>
+                    <span>wandering around</span> {' '}
                     <br />
-                    <span>
+                    <span style={{  lineHeight: "80px"}}>
                       <img
                         alt='background'
                         src='./img/main/main_first_slide_text_2.png'
@@ -861,7 +853,7 @@ export default function Main() {
                   <br />
                   <span>
                     {' '}
-                    from my travels around
+                    from my travels around {' '}
                     <img
                       alt='background'
                       src='./img/main/main_third_slide_img_3.png'
@@ -1102,27 +1094,28 @@ export default function Main() {
               </div>
               <div
                 id='main-blog-line'
-                className='d-flex justify-content-space-around'
+                className='d-flex'
+                style={{gap: 30, justifyContent: "center"}}
               >
                 <BlogCard
-                  header='Name article'
+                  header='Adventure in India'
                   img='main_1.png'
-                  text='You can buy my photos and use them in your project. You can buy my photos and use them in your project'
+                  text="Sometimes it's important to just relax not to think about what others think and do what you want."
                 />
                 <BlogCard
                   img='main_2.png'
-                  header='Name article'
-                  text='You can buy my photos and use them in your project. You can buy my photos and use them in your project'
+                  header='Friend penguin'
+                  text='Animals love to have fun too. Let me prove it to you.'
                 />
                 <BlogCard
                   img='main_3.png'
-                  header='Name article'
-                  text='You can buy my photos and use them in your project. You can buy my photos and use them in your project'
+                  header='Happiest is laughter'
+                  text='Laughter will always help to get out of any situation. A sense of humor is definitely the most important thing in our life.'
                 />
                 <BlogCard
                   img='main_4.png'
-                  header='Name article'
-                  text='You can buy my photos and use them in your project. You can buy my photos and use them in your project'
+                  header='Unexpected moments'
+                  text='You can’t even guess how one white lady took and changed my day 180 degrees.'
                 />
               </div>
               <div className='text-align-center'>

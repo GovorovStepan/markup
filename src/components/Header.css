@@ -17,6 +17,18 @@
   }
 }
 
+nav a:hover{
+  text-decoration: underline;
+}
+
+.active{
+  text-decoration: underline;
+}
+
+.pending{
+  text-decoration: underline;
+}
+
 
 #links_text {
   display: flex;

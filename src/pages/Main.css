@@ -54,7 +54,7 @@
 }
 
 .first_slide_text {
-  margin-left: 230px;
+  margin-left: 200px;
   margin-top: 150px;
 }
 
@@ -317,7 +317,7 @@
   padding-bottom: 20px;
 }
 
-
+/* 
 #collection_all {
   display: flex;
   align-items: flex-end;
@@ -395,4 +395,4 @@
   font-weight: 400;
   font-size: 40px;
   line-height: 54px;
-}
+} */

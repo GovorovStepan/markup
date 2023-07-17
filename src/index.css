@@ -86,3 +86,14 @@ img {
     height: 50px;
   }
 }
+
+.btn-primary:hover{
+  color: white;
+  background: black;
+  border: 1px solid white;
+}
+
+.text_img{
+  top: 10px;
+  position: relative;
+}

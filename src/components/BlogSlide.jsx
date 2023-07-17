@@ -89,7 +89,7 @@ export default function BlogSlide({ position, text, img, slide, children }) {
               <div>
                 <p style={styles.text_min}>{text}</p>
               </div>
-              <button className='btn-primary' onClick={() => openBlog(slide)} >Application</button>
+              <button className='btn-primary' onClick={() => openBlog(slide)} >See</button>
             </article>
           </div>
         </div>
@@ -108,7 +108,7 @@ export default function BlogSlide({ position, text, img, slide, children }) {
               <div>
                 <p style={styles.text_min}>{text}</p>
               </div>
-              <button className='btn-primary' onClick={() => openBlog(slide)}>Application</button>
+              <button className='btn-primary' onClick={() => openBlog(slide)}>See</button>
             </article>
             <div
               style={styles.bottom_img}

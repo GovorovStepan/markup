@@ -1,0 +1,79 @@
+
+#collection_all {
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-end;
+  transition: all 0.5s;
+  background: no-repeat center/100% url('../../public/img/main/collection/collection_white_1.png');
+}
+
+#collection_all span {
+  margin-right: 78px;
+  margin-bottom: 100px;
+}
+
+#collection_all:hover {
+  background: no-repeat center/100% url('../../public/img/main/collection/collection_all.png');
+  transition: all 0.5s;
+}
+
+#collection_view {
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-end;
+  transition: all 0.5s;
+  background: no-repeat center/100% url('../../public/img/main/collection/collection_white_2.png');
+}
+
+#collection_view span {
+  margin-right: 78px;
+  margin-bottom: 100px;
+}
+
+#collection_view:hover {
+  transition: all 0.5s;
+  background: no-repeat center/100% url('../../public/img/main/collection/collection_view.png');
+}
+
+
+#collection_animal {
+  display: flex;
+  transition: all 0.5s;
+  background: no-repeat center/100% url('../../public/img/main/collection/collection_white_3.png');
+}
+
+#collection_animal span {
+  margin-left: 78px;
+  margin-top: 140px;
+}
+
+#collection_animal:hover {
+  transition: all 0.5s;
+  background: no-repeat center/100% url('../../public/img/main/collection/collection_animal.png');
+}
+
+#collection_texture {
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-end;
+  transition: all 0.5s;
+  background: no-repeat center/100% url('../../public/img/main/collection/collection_white_4.png');
+}
+
+#collection_texture span {
+  margin-right: 78px;
+  margin-bottom: 100px;
+}
+
+#collection_texture:hover {
+  transition: all 0.5s;
+  background: no-repeat center/100% url('../../public/img/main/collection/collection_texture.png');
+}
+
+#collection span {
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 40px;
+  line-height: 54px;
+}
