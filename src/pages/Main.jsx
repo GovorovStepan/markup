@@ -1,15 +1,37 @@
-import React, { useContext, useEffect } from 'react';
+import React, { useContext, useEffect, useState } from 'react';
 import Header from '../components/Header';
 import BlogCard from '../components/BlogCard';
 import './Main.css';
 import { AppContext } from '../context/AppContext';
 import { useNavigate } from 'react-router-dom'
 import { useMediaQuery } from 'react-responsive';
+import { MutatingDots } from 'react-loader-spinner'
+
 
 export default function Main() {
 
   const isTablet = useMediaQuery({ query: '(max-width: 934px)' });
   const isMobile = useMediaQuery({ query: '(max-width: 600px)' });
+
+
+  // Set loading state to true initially
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    // Loading function to load data or
+    // fake it using setTimeout;
+    const loadData = async () => {
+
+      // Wait for two second
+      await new Promise((r) => setTimeout(r, 1000));
+      console.log('dsss', loading)
+
+      // Toggle loading state
+      setLoading(!loading);
+    };
+
+    loadData();
+  }, [])
 
   const { dispatch } = useContext(AppContext);
   const navigate = useNavigate();
@@ -29,6 +51,19 @@ export default function Main() {
     moveTo('/collection')
   }
 
+
+  if (loading) {
+    return (<MutatingDots 
+      height="100"
+      width="100"
+      color="#4fa94d"
+      secondaryColor='#4fa94d'
+      radius='12.5'
+      ariaLabel="mutating-dots-loading"
+      wrapperStyle={{position: "absolute", top: `${window.innerHeight/2}px`}}
+      wrapperClass=""
+      visible={true} />)
+  }
 
   return (
     <div
@@ -53,7 +88,7 @@ export default function Main() {
                   <br />
                   <span>wandering around</span>
                   <br />
-                  <span > 
+                  <span >
                     <img
                       alt='background'
                       src='./img/main/main_first_slide_text_2.png'
@@ -71,7 +106,7 @@ export default function Main() {
                   <br /> remain indifferent
                 </p>
               </div>
-              <button className='btn-primary'>Application</button>
+              <button className='btn-primary'>Learn more</button>
             </article>
             <img
               alt='background'
@@ -268,114 +303,114 @@ export default function Main() {
             </div>
           </div>
           <div>
-          <div className='slide_header_sm border-bottom'>Travel map</div>
-          <div className='d-flex'>
-                <div className='d-flex align-items-center flex-direction-column' style={{ padding: "20px 20px" }}>
-                  <img
-                    alt='background'
-                    id='map'
-                    style={{ padding: "80px" }}
-                    src='./img/main/sm/map.svg'
-                  ></img>
-                  <div>
-                    <button className='btn-primary'  onClick={() => { moveTo('/collection')}}> See photo</button>
-                  </div>
-                </div>
-
-              </div>
-              <div
-              >
+            <div className='slide_header_sm border-bottom'>Travel map</div>
+            <div className='d-flex'>
+              <div className='d-flex align-items-center flex-direction-column' style={{ padding: "20px 20px" }}>
                 <img
                   alt='background'
-                  src='./img/main/sm/6.png'
-                  className='border-bottom'
-                  style={{ height: '100%' }}
+                  id='map'
+                  style={{ padding: "80px" }}
+                  src='./img/main/sm/map.svg'
                 ></img>
+                <div>
+                  <button className='btn-primary' onClick={() => { moveTo('/collection') }}> See photo</button>
+                </div>
               </div>
+
+            </div>
+            <div
+            >
+              <img
+                alt='background'
+                src='./img/main/sm/6.png'
+                className='border-bottom'
+                style={{ height: '100%' }}
+              ></img>
+            </div>
           </div>
           <div className='border-bottom'>
-          <div className='slide_header_sm border-bottom' style={{ paddingLeft: '5%' }}>Blog</div>
-              <div
-                id='main-blog-line'
-                style={{
-                  flexWrap: "wrap", paddingRight: 20,
-                  paddingLeft: 20,
-                  gap: 20
-                }}
-                className='d-flex justify-content-space-around'
-              >
-                <BlogCard
-                  header='Adventure in India'
-                  img='main_1.png'
-                  text="Sometimes it's important to just relax not to think about what others think and do what you want."
-                />
-                <BlogCard
-                  img='main_2.png'
-                  header='Friend penguin'
-                  text='Animals love to have fun too. Let me prove it to you.'
-                />
-                <BlogCard
-                  img='main_3.png'
-                  header='Happiest is laughter'
-                  text='Laughter will always help to get out of any situation. A sense of humor is definitely the most important thing in our life.'
-                />
-                <BlogCard
-                  img='main_4.png'
-                  header='Unexpected moments'
-                  text='You can’t even guess how one white lady took and changed my day 180 degrees.'
-                />
-              </div>
-              <div style={{ textAlign: "center" }}>
-                <button className='btn-primary' onClick={() => { moveTo('/blog')}}> Show more</button>
-              </div>
+            <div className='slide_header_sm border-bottom' style={{ paddingLeft: '5%' }}>Blog</div>
+            <div
+              id='main-blog-line'
+              style={{
+                flexWrap: "wrap", paddingRight: 20,
+                paddingLeft: 20,
+                gap: 20
+              }}
+              className='d-flex justify-content-space-around'
+            >
+              <BlogCard
+                header='Adventure in India'
+                img='main_1.png'
+                text="Sometimes it's important to just relax not to think about what others think and do what you want."
+              />
+              <BlogCard
+                img='main_2.png'
+                header='Friend penguin'
+                text='Animals love to have fun too. Let me prove it to you.'
+              />
+              <BlogCard
+                img='main_3.png'
+                header='Happiest is laughter'
+                text='Laughter will always help to get out of any situation. A sense of humor is definitely the most important thing in our life.'
+              />
+              <BlogCard
+                img='main_4.png'
+                header='Unexpected moments'
+                text='You can’t even guess how one white lady took and changed my day 180 degrees.'
+              />
+            </div>
+            <div style={{ textAlign: "center" }}>
+              <button className='btn-primary' onClick={() => { moveTo('/blog') }}> Show more</button>
+            </div>
 
           </div>
           <div id="contacts">
-          <div className='slide_header_sm border-bottom' >Contacts</div>
+            <div className='slide_header_sm border-bottom' >Contacts</div>
+            <div style={{
+              display: "flex", flexDirection: "column", margin: "50px 30px", fontFamily: "Open Sans",
+              fontStyle: "normal", lineHeight: "normal",
+              fontWeight: 400,
+            }}>
               <div style={{
-                display: "flex", flexDirection: "column", margin: "50px 30px", fontFamily: "Open Sans",
+
+              }}>
+                <p>
+                  <span style={{ fontSize: "12px" }}>email</span>
+                  <br />
+                  <span style={{ fontSize: "24px" }}>
+                    <a href='mailto:photobuy@gmail.com'>photobuy@gmail.com</a>
+                  </span>
+                </p>
+                <br />
+                <p>
+                  <span style={{ fontSize: "12px" }}>telegram</span>
+                  <br />
+                  <span style={{ fontSize: "24px" }}>
+                    <a href='https://www.telegram.com'>ann_korn</a>
+                  </span>
+                </p>
+              </div>
+
+
+              <p style={{
+                marginTop: 40, fontSize: "16px", fontFamily: "Open Sans",
                 fontStyle: "normal", lineHeight: "normal",
                 fontWeight: 400,
               }}>
-                <div style={{
-
-                }}>
-                  <p>
-                    <span style={{ fontSize: "12px" }}>email</span>
-                    <br />
-                    <span style={{ fontSize: "24px" }}>
-                      <a href='mailto:photobuy@gmail.com'>photobuy@gmail.com</a>
-                    </span>
-                  </p>
-                  <br />
-                  <p>
-                    <span style={{ fontSize: "12px" }}>telegram</span>
-                    <br />
-                    <span style={{ fontSize: "24px" }}>
-                      <a href='https://www.telegram.com'>ann_korn</a>
-                    </span>
-                  </p>
-                </div>
-
-
-                <p style={{
-                  marginTop: 40, fontSize: "16px", fontFamily: "Open Sans",
-                  fontStyle: "normal", lineHeight: "normal",
-                  fontWeight: 400,
-                }}>
-                  If you have any questions, please don't hesitate to contact
-                  me. I'm always happy to help and want to ensure that you
-                  are completely satisfied. I will also be glad to
-                  communicate  with everyone who is interested in traveling.
-                </p>
-              </div>
+                If you have any questions, please don't hesitate to contact
+                me. I'm always happy to help and want to ensure that you
+                are completely satisfied. I will also be glad to
+                communicate  with everyone who is interested in traveling.
+              </p>
+            </div>
           </div>
           <div >
-              <img
-                alt='background '
-                src='./img/main/sm/7.png'
-              ></img>
-            </div>
+            <img
+              alt='background '
+              src='./img/main/sm/7.png'
+            ></img>
+          </div>
         </div> : isTablet ?
           <div id="content">
             <div>
@@ -627,7 +662,7 @@ export default function Main() {
                     src='./img/main/mid/5.png'
                   ></img>
                   <div>
-                    <button className='btn-primary'  onClick={() => { moveTo('/collection')}}> See photo</button>
+                    <button className='btn-primary' onClick={() => { moveTo('/collection') }}> See photo</button>
                   </div>
                 </div>
 
@@ -675,7 +710,7 @@ export default function Main() {
                 />
               </div>
               <div style={{ textAlign: "center" }}>
-                <button className='btn-primary'  onClick={() => { moveTo('/blog')}}> Show more</button>
+                <button className='btn-primary' onClick={() => { moveTo('/blog') }}> Show more</button>
               </div>
             </div>
             <div id="contacts">
@@ -746,7 +781,7 @@ export default function Main() {
                     <br />
                     <span>wandering around</span> {' '}
                     <br />
-                    <span style={{  lineHeight: "80px"}}>
+                    <span style={{ lineHeight: "80px" }}>
                       <img
                         alt='background'
                         src='./img/main/main_first_slide_text_2.png'
@@ -1070,7 +1105,7 @@ export default function Main() {
                         src='./img/main/main_eight_slide_img_2.svg'
                       ></img>
                       <div>
-                        <button className='btn-primary'  onClick={() => { moveTo('/collection')}}> See photo</button>
+                        <button className='btn-primary' onClick={() => { moveTo('/collection') }}> See photo</button>
                       </div>
                     </div>
                     <div
@@ -1095,7 +1130,7 @@ export default function Main() {
               <div
                 id='main-blog-line'
                 className='d-flex'
-                style={{gap: 30, justifyContent: "center"}}
+                style={{ gap: 30, justifyContent: "center" }}
               >
                 <BlogCard
                   header='Adventure in India'
@@ -1119,7 +1154,7 @@ export default function Main() {
                 />
               </div>
               <div className='text-align-center'>
-                <button className='btn-primary'  onClick={() => { moveTo('/blog')}}> Show more</button>
+                <button className='btn-primary' onClick={() => { moveTo('/blog') }}> Show more</button>
               </div>
             </div>
             <div className='tenth_slide border-top' id="contacts">
@@ -1161,7 +1196,7 @@ export default function Main() {
               ></img>
             </div>
           </div>}
-          <Header position='left'></Header>
+        <Header position='left'></Header>
       </div>
 
     </div>

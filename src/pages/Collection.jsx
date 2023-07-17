@@ -1,13 +1,44 @@
 import Header from '../components/Header';
 import CollectionMain from '../components/CollectionMain';
+import React, { useEffect, useState } from 'react';
 import './Collection.css';
 import { useMediaQuery } from 'react-responsive';
+import { MutatingDots } from 'react-loader-spinner'
 
 export default function Collection() {
 
 
   const isTablet = useMediaQuery({ query: '(max-width: 934px)' });
   const isMobile = useMediaQuery({ query: '(max-width: 600px)' });
+  // Set loading state to true initially
+  const [loading, setLoading] = useState(true);
+  useEffect(() => {
+    // Loading function to load data or
+    // fake it using setTimeout;
+    const loadData = async () => {
+
+      // Wait for two second
+      await new Promise((r) => setTimeout(r, 1000));
+      console.log('dsss', loading)
+
+      // Toggle loading state
+      setLoading(!loading);
+    };
+
+    loadData();
+  }, [])
+  if (loading) {
+    return (<MutatingDots
+      height="100"
+      width="100"
+      color="#4fa94d"
+      secondaryColor='#4fa94d'
+      radius='12.5'
+      ariaLabel="mutating-dots-loading"
+      wrapperStyle={{ position: "absolute", top: `${window.innerHeight / 2}px` }}
+      wrapperClass=""
+      visible={true} />)
+  }
   return (
     <div
       className='collection'
