@@ -317,13 +317,12 @@
   padding-bottom: 20px;
 }
 
-
 #collection_all {
   display: flex;
   align-items: flex-end;
   justify-content: flex-end;
   transition: all 0.5s;
-  background: no-repeat center/100% url('%PUBLIC_URL%/public/img/main/collection/collection_white_1.png');
+  background: no-repeat center/100% url('../../public/img/main/collection/collection_white_1.png');
 }
 
 #collection_all span {
@@ -332,7 +331,7 @@
 }
 
 #collection_all:hover {
-  background: no-repeat center/100% url('%PUBLIC_URL%/public/img/main/collection/collection_all.png');
+  background: no-repeat center/100% url('../../public/img/main/collection/collection_all.png');
   transition: all 0.5s;
 }
 
@@ -341,7 +340,7 @@
   align-items: flex-end;
   justify-content: flex-end;
   transition: all 0.5s;
-  background: no-repeat center/100% url('%PUBLIC_URL%/public/img/main/collection/collection_white_2.png');
+  background: no-repeat center/100% url('../../public/img/main/collection/collection_white_2.png');
 }
 
 #collection_view span {
@@ -351,14 +350,14 @@
 
 #collection_view:hover {
   transition: all 0.5s;
-  background: no-repeat center/100% url('%PUBLIC_URL%/public/img/main/collection/collection_view.png');
+  background: no-repeat center/100% url('../../public/img/main/collection/collection_view.png');
 }
 
 
 #collection_animal {
   display: flex;
   transition: all 0.5s;
-  background: no-repeat center/100% url('%PUBLIC_URL%/public/img/main/collection/collection_white_3.png');
+  background: no-repeat center/100% url('../../public/img/main/collection/collection_white_3.png');
 }
 
 #collection_animal span {
@@ -368,7 +367,7 @@
 
 #collection_animal:hover {
   transition: all 0.5s;
-  background: no-repeat center/100% url('%PUBLIC_URL%/public/img/main/collection/collection_animal.png');
+  background: no-repeat center/100% url('../../public/img/main/collection/collection_animal.png');
 }
 
 #collection_texture {
@@ -376,7 +375,7 @@
   align-items: flex-end;
   justify-content: flex-end;
   transition: all 0.5s;
-  background: no-repeat center/100% url('%PUBLIC_URL%/public/img/main/collection/collection_white_4.png');
+  background: no-repeat center/100% url('../../public/img/main/collection/collection_white_4.png');
 }
 
 #collection_texture span {
@@ -386,7 +385,7 @@
 
 #collection_texture:hover {
   transition: all 0.5s;
-  background: no-repeat center/100% url('%PUBLIC_URL%/public/img/main/collection/collection_texture.png');
+  background: no-repeat center/100% url('../../public/img/main/collection/collection_texture.png');
 }
 
 #collection span {
