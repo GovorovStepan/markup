@@ -50,7 +50,7 @@ export default function Blog() {
       secondaryColor='#4fa94d'
       radius='12.5'
       ariaLabel="mutating-dots-loading"
-      wrapperStyle={{position: "absolute", top: `${window.innerHeight/2}px`}}
+      wrapperStyle={{position: "absolute", top: `${window.innerHeight/3}px`}}
       wrapperClass=""
       visible={true} />)
   }
