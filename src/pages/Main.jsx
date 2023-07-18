@@ -304,7 +304,7 @@ export default function Main() {
               </article>
             </div>
           </div>
-          <div>
+          {/* <div>
             <div className='slide_header_sm border-bottom'>Travel map</div>
             <div className='d-flex'>
               <div className='d-flex align-items-center flex-direction-column' style={{ padding: "20px 20px" }}>
@@ -329,7 +329,7 @@ export default function Main() {
                 style={{ height: '100%' }}
               ></img>
             </div>
-          </div>
+          </div> */}
           <div className='border-bottom'>
             <div className='slide_header_sm border-bottom' style={{ paddingLeft: '5%' }}>Blog</div>
             <div
