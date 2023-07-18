@@ -999,7 +999,7 @@ export default function Main() {
                     className='d-flex'
                     style={{ height: 805 }}
                   >
-                    <div style={{ width: 175 }}></div>
+                    <div></div>
                     <div
                       id='collection_all'
                       className='border-left border-right'
