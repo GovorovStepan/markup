@@ -100,7 +100,7 @@ export default function Main() {
                 </p>
               </div>
               <div>
-                <p>
+                <p style={{marginTop: -12,   marginBottom: 30}}>
                   I create photos that touch your soul,
                   <br /> looking at them you will not be able to
                   <br /> remain indifferent
