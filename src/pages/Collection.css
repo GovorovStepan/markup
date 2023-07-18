@@ -36,6 +36,11 @@
   background: black;
 }
 
+.active_filter{
+  color: white;
+  background: black;
+}
+
 /* Small devices (portrait tablets and large phones, 600px and up) */
 @media only screen and (min-width: 600px) and (max-width: 1300px) {
   #header_left_bg {
