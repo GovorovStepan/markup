@@ -21,8 +21,8 @@ export default function CollectionMain() {
   return (
     <div id={!isTablet ? "collection_wrapper" : !isMobile ? 'collection_wrapper_medium' : 'collection_wrapper_small'}>
       <div id="filter" className={!isTablet ? 'filter_big' : !isMobile ? 'filter_medium' : 'filter_small'} >
-        <span style={{ borderRight: 'none' }} onClick={() => changeFilter('all')} className={collection_filter === 'all' ? 'active_filter' : ''}>All</span>
-        <span style={{borderBottom: isMobile ? 'none' : '1px solid black'}}onClick={() => changeFilter('landscapes')} className={collection_filter === 'landscapes' ? 'active_filter' : ''}>Landscapes</span>
+        <span style={isMobile ? { paddingRight: 40, paddingLeft: 41, borderRight: 'none', borderBottom: 'none' } : { borderRight: 'none' }} onClick={() => changeFilter('all')} className={collection_filter === 'all' ? 'active_filter' : ''}>All</span>
+        <span style={{ borderBottom: isMobile ? 'none' : '1px solid black' }} onClick={() => changeFilter('landscapes')} className={collection_filter === 'landscapes' ? 'active_filter' : ''}>Landscapes</span>
         <span style={{ borderRight: 'none', borderLeft: !isMobile ? 'none' : '1px solid black' }} onClick={() => changeFilter('animal')} className={collection_filter === 'animal' ? 'active_filter' : ''}>Animals</span>
         <span onClick={() => changeFilter('texture')} className={collection_filter === 'texture' ? 'active_filter' : ''}>Texture</span>
       </div>
