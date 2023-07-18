@@ -18,7 +18,7 @@ export default function Collection() {
     const loadData = async () => {
 
       // Wait for two second
-      await new Promise((r) => setTimeout(r, 1000));
+      await new Promise((r) => setTimeout(r, 2000));
       console.log('dsss', loading)
 
       // Toggle loading state

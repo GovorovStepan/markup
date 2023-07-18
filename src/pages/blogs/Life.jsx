@@ -43,7 +43,7 @@ export default function Life() {
     const loadData = async () => {
 
       // Wait for two second
-      await new Promise((r) => setTimeout(r, 1000));
+      await new Promise((r) => setTimeout(r, 2000));
       console.log('dsss', loading)
 
       // Toggle loading state
@@ -147,7 +147,6 @@ export default function Life() {
               }}>
                 <div><img style={{ maxWidth: 82, height: "100%" }} src={`../img/blog/life/1_sm.png`} className='border-right'></img></div>
                 <div><p style={{
-                  maxWidth: 247,
                   marginTop: 35,
                   marginRight: 22,
                   marginLeft: 24,
@@ -176,7 +175,6 @@ export default function Life() {
               }}>
 
                 <div><p style={{
-                  maxWidth: 252,
                   marginTop: 50,
                   marginRight: 36,
                   marginLeft: 24,
