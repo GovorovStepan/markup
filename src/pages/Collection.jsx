@@ -48,7 +48,7 @@ export default function Collection() {
       <div id='content'>
         <div>
           {!isTablet ?
-            <div className='header_slide border-top d-flex'>
+            <div className='header_slide d-flex'>
               <div style={{ maxWidth: 575 }}>
                 <img
                   style={{ height: '100%' }}

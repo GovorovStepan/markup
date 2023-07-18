@@ -87,13 +87,22 @@ img {
   }
 }
 
-.btn-primary:hover{
+.btn-primary:hover {
   color: white;
   background: black;
   border: 1px solid white;
 }
 
-.text_img{
-  top: 10px;
-  position: relative;
+@media only screen and (max-width: 900px) {
+  .text_img {
+    top: 5px;
+    position: relative;
+  }
+}
+
+@media only screen and (min-width: 900px) {
+  .text_img {
+    top: 10px;
+    position: relative;
+  }
 }

@@ -1,5 +1,5 @@
 import Header from '../components/Header';
-import React, {  useEffect, useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import BlogSlide from '../components/BlogSlide';
 import './Blog.css';
 import { useMediaQuery } from 'react-responsive';
@@ -25,15 +25,15 @@ const styles = {
 export default function Blog() {
   const isTablet = useMediaQuery({ query: '(max-width: 934px)' });
   const isMobile = useMediaQuery({ query: '(max-width: 600px)' });
-    // Set loading state to true initially
-    const [loading, setLoading] = useState(true);
+  // Set loading state to true initially
+  const [loading, setLoading] = useState(true);
   useEffect(() => {
     // Loading function to load data or
     // fake it using setTimeout;
     const loadData = async () => {
 
       // Wait for two second
-      await new Promise((r) => setTimeout(r, 1000));
+      await new Promise((r) => setTimeout(r, 10));
       console.log('dsss', loading)
 
       // Toggle loading state
@@ -43,14 +43,14 @@ export default function Blog() {
     loadData();
   }, [])
   if (loading) {
-    return (<MutatingDots 
+    return (<MutatingDots
       height="100"
       width="100"
       color="#4fa94d"
       secondaryColor='#4fa94d'
       radius='12.5'
       ariaLabel="mutating-dots-loading"
-      wrapperStyle={{position: "absolute", top: `${window.innerHeight/3}px`}}
+      wrapperStyle={{ position: "absolute", top: `${window.innerHeight / 3}px` }}
       wrapperClass=""
       visible={true} />)
   }
@@ -96,7 +96,7 @@ export default function Blog() {
               </div>
             </div>
             :
-            <div style={{ marginTop: 70}}>
+            <div style={{ marginTop: 70 }}>
               <div id='header_main_text'>
                 <div style={{ textAlign: "center" }}>
                   <span>
@@ -129,12 +129,12 @@ export default function Blog() {
                 background: `no-repeat center/100% url('./img/blog/header_small.png')`,
                 height: 413
               }}
-              className='border-bottom'
+              className='border-bottom border-top'
             ></div> :
               <img
                 alt='background'
                 src='./img/blog/header_back.png'
-                className='border-bottom'
+                className='border-bottom border-top'
               ></img>}
           </div>
         </div>

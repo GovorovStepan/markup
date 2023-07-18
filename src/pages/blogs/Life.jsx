@@ -1,7 +1,8 @@
-import React from 'react';
 import { useMediaQuery } from 'react-responsive';
 import Header from '../../components/Header';
-
+import { MutatingDots } from 'react-loader-spinner'
+import React, { useEffect, useState } from 'react';
+import { useNavigate } from 'react-router-dom'
 const styles = {
   slider_header: {
     height: 100,
@@ -24,9 +25,45 @@ const styles = {
 };
 
 export default function Life() {
+  const navigate = useNavigate();
+
+  const moveTo = (value) => {
+    navigate(`${value}`, { replace: true });
+    window.scrollTo(0, 0);
+  }
 
   const isTablet = useMediaQuery({ query: '(max-width: 934px)' });
   const isMobile = useMediaQuery({ query: '(max-width: 600px)' });
+
+  // Set loading state to true initially
+  const [loading, setLoading] = useState(true);
+  useEffect(() => {
+    // Loading function to load data or
+    // fake it using setTimeout;
+    const loadData = async () => {
+
+      // Wait for two second
+      await new Promise((r) => setTimeout(r, 10));
+      console.log('dsss', loading)
+
+      // Toggle loading state
+      setLoading(!loading);
+    };
+
+    loadData();
+  }, [])
+  if (loading) {
+    return (<MutatingDots
+      height="100"
+      width="100"
+      color="#4fa94d"
+      secondaryColor='#4fa94d'
+      radius='12.5'
+      ariaLabel="mutating-dots-loading"
+      wrapperStyle={{ position: "absolute", top: `${window.innerHeight / 3}px` }}
+      wrapperClass=""
+      visible={true} />)
+  }
 
   styles.bottom_img = {
     background: `no-repeat center/100% url('../img/blog/life_main.png')`
@@ -91,10 +128,13 @@ export default function Life() {
                   <div>
                     <p style={styles.text_min}>Laughter will always help to get out of any situation. A sense of humor is definitely the most important thing in our life.</p>
                   </div>
+                  <div>
+                    <button className='btn-primary' onClick={() => { moveTo('/blog') }}> Back</button>
+                  </div>
                 </article>
                 <div
                   style={styles.bottom_img}
-                  className='main_img'
+                  className='main_img border-top border-bottom'
                 ></div>
               </div>
               <div
@@ -104,10 +144,10 @@ export default function Life() {
               <div className="border-bottom" style={{
                 display: "flex"
               }}>
-                <div><img style={{ maxWidth: 82, height: "100%" }} src={`../img/blog/life/1_sm.png`}></img></div>
+                <div><img style={{ maxWidth: 82, height: "100%" }} src={`../img/blog/life/1_sm.png`} className='border-right'></img></div>
                 <div><p style={{
                   maxWidth: 247,
-                  marginTop: 50,
+                  marginTop: 35,
                   marginRight: 22,
                   marginLeft: 24,
                   fontSize: 18,
@@ -123,7 +163,7 @@ export default function Life() {
                 className='border-bottom'
                 style={{ height: 50 }}
               ></div>
-              <div><img src={`../img/blog/life/3_sm.png`}></img></div>
+              <div><img src={`../img/blog/life/3_sm.png`} className='border-bottom'></img></div>
               <div
                 className='border-bottom'
                 style={{ height: 50 }}
@@ -148,7 +188,7 @@ export default function Life() {
 
 
                 </p></div>
-                <div><img style={{ maxWidth: 63, height: "100%" }} src={`../img/blog/life/4_sm.png`}></img></div>
+                <div><img style={{ maxWidth: 63, height: "100%" }} src={`../img/blog/life/4_sm.png`} className='border-left'></img></div>
               </div>
               <div
                 className='border-bottom'
@@ -167,12 +207,12 @@ export default function Life() {
                   Thank you for joining me and my stories. I hope you've had fun as you embark on a noisy journey through this enchanting island. My comical encounters left an indelible mark on the hearts of both locals and fellow travelers.<br /><br />
 
                   Saying goodbye to Bali, I took with me not only the memories of the picturesque landscapes, but also the laughter and joy that I shared with the people I met along the way. I hope my carefree disposition and ability to find humor in any situation have left an indelible mark on the island, reminding both locals and travelers to embrace life's comedic moments and approach every adventure with a smile.
-
+                  <br />
+                  <span style={{ fontSize: 16 }}>20.05.2023</span>
                 </p>
-                <span style={{ fontSize: 14, marginLeft: 20 }}>20.05.2023</span>
               </div>
               <div>
-                <img src={`../img/blog/life/5_sm.png`}></img>
+                <img src={`../img/blog/life/5_sm.png`} className='border-top border-bottom'></img>
               </div>
             </div>
           </div> :
@@ -208,10 +248,13 @@ export default function Life() {
                     <div>
                       <p style={styles.text_min}>Laughter will always help to get out of any situation. A sense of humor is definitely the most important thing in our life.</p>
                     </div>
+                    <div>
+                      <button className='btn-primary' onClick={() => { moveTo('/blog') }}> Back</button>
+                    </div>
                   </article>
                   <div
                     style={styles.bottom_img}
-                    className='main_img'
+                    className='main_img border-top border-bottom'
                   ></div>
                 </div>
                 <div
@@ -221,10 +264,10 @@ export default function Life() {
                 <div className="border-bottom" style={{
                   display: "flex"
                 }}>
-                  <div><img style={{ maxWidth: 267, height: "100%" }} src={`../img/blog/life/1_mid.png`}></img></div>
+                  <div><img style={{ maxWidth: 267, height: "100%" }} src={`../img/blog/life/1_mid.png`} className='border-right'></img></div>
                   <div><p style={{
                     maxWidth: 448,
-                    marginTop: 75,
+                    marginTop: 50,
                     marginRight: 60,
                     marginLeft: 60,
                     lineHeight: "normal",
@@ -240,7 +283,7 @@ export default function Life() {
                   className='border-bottom'
                   style={{ height: 100 }}
                 ></div>
-                <div><img src={`../img/blog/life/3_mid.png`}></img></div>
+                <div><img src={`../img/blog/life/3_mid.png`} className='border-bottom'></img></div>
                 <div
                   className='border-bottom'
                   style={{ height: 100 }}
@@ -266,7 +309,7 @@ export default function Life() {
 
 
                   </p></div>
-                  <div><img style={{ maxWidth: 267, height: "100%" }} src={`../img/blog/life/4_mid.png`}></img></div>
+                  <div><img style={{ maxWidth: 267, height: "100%" }} src={`../img/blog/life/4_mid.png`} className='border-left'></img></div>
                 </div>
                 <div
                   className='border-bottom'
@@ -285,11 +328,12 @@ export default function Life() {
                     Thank you for joining me and my stories. I hope you've had fun as you embark on a noisy journey through this enchanting island. My comical encounters left an indelible mark on the hearts of both locals and fellow travelers.<br /><br />
 
                     Saying goodbye to Bali, I took with me not only the memories of the picturesque landscapes, but also the laughter and joy that I shared with the people I met along the way. I hope my carefree disposition and ability to find humor in any situation have left an indelible mark on the island, reminding both locals and travelers to embrace life's comedic moments and approach every adventure with a smile.
+                    <br />
+                    <span style={{ fontSize: 18 }}>20.05.2023</span>
                   </p>
-                  <span style={{ fontSize: 20, marginLeft: 65 }}>20.05.2023</span>
                 </div>
                 <div>
-                  <img src={`../img/blog/life/5_mid.png`}></img>
+                  <img src={`../img/blog/life/5_mid.png`} className='border-top border-bottom'></img>
                 </div>
               </div>
             </div>
@@ -330,6 +374,9 @@ export default function Life() {
                   <div>
                     <p style={styles.text_min}>Laughter will always help to get out of any situation. A sense of humor is definitely the most important thing in our life.</p>
                   </div>
+                  <div>
+                    <button className='btn-primary' onClick={() => { moveTo('/blog') }}> Back</button>
+                  </div>
                   {/* <button className='btn-primary'>Application</button> */}
                 </article>
                 <img
@@ -364,7 +411,7 @@ export default function Life() {
                 className='border-bottom'
                 style={{ height: 100 }}
               ></div>
-              <div style={{ maxHeight: 803 }} ><img style={{ height: "100%" }} src={`../img/blog/life/3.png`}></img></div>
+              <div style={{ maxHeight: 803 }} ><img style={{ height: "100%" }} src={`../img/blog/life/3.png`} className='border-bottom'></img></div>
               <div
                 className='border-bottom'
                 style={{ height: 100 }}
@@ -373,7 +420,8 @@ export default function Life() {
                 <div><p style={{
                   paddingRight: 100,
                   paddingLeft: 175,
-                  paddingTop: 100,
+                  paddingTop: 50,
+                  // paddingBottom: 20,
                   width: 1170,
                   fontSize: 28,
                   lineHeight: "normal"
@@ -385,7 +433,7 @@ export default function Life() {
 
 
                 </p></div>
-                <div style={{ maxHeight: 572 }}><img style={{ height: "100%" }} src={`../img/blog/life/4.png`}></img></div>
+                <div style={{ maxHeight: 572 }}><img style={{ height: "100%" }} src={`../img/blog/life/4.png`} className='border-left'></img></div>
               </div>
               <div style={{ display: 'flex' }} className='border-bottom'>
                 <div><img style={{ height: "100%" }} src={`../img/blog/life/5.png`} className='border-right'></img></div>
@@ -403,9 +451,9 @@ export default function Life() {
                       Thank you for joining me and my stories. I hope you've had fun as you embark on a noisy journey through this enchanting island. My comical encounters left an indelible mark on the hearts of both locals and fellow travelers.<br /><br />
 
                       Saying goodbye to Bali, I took with me not only the memories of the picturesque landscapes, but also the laughter and joy that I shared with the people I met along the way. I hope my carefree disposition and ability to find humor in any situation have left an indelible mark on the island, reminding both locals and travelers to embrace life's comedic moments and approach every adventure with a smile.
-
+                      <br />
+                      <span style={{ fontSize: 18 }}>20.05.2023</span>
                     </p>
-                    <span style={{ fontSize: 14, marginLeft: 132 }}>20.05.2023</span>
                   </div>
                 </div>
 

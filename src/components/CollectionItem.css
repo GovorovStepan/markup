@@ -1,6 +1,6 @@
 #collection_item{
   /* flex-grow: 1; */
-  padding: 20px;
+  padding: 18px;
   border: 2px solid black;
   display: flex;
   flex-direction: column;

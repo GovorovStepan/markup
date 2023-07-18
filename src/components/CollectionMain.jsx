@@ -21,9 +21,9 @@ export default function CollectionMain() {
   return (
     <div id={!isTablet ? "collection_wrapper" : !isMobile ? 'collection_wrapper_medium' : 'collection_wrapper_small'}>
       <div id="filter" className={!isTablet ? 'filter_big' : !isMobile ? 'filter_medium' : 'filter_small'} >
-        <span onClick={() => changeFilter('all')}>All</span>
+        <span style={{borderRight: 'none' }} onClick={() => changeFilter('all')}>All</span>
         <span onClick={() => changeFilter('landscapes')}>Landscapes</span>
-        <span onClick={() => changeFilter('animal')}>Animals</span>
+        <span style={{borderRight: 'none', borderLeft: 'none' }} onClick={() => changeFilter('animal')}>Animals</span>
         <span onClick={() => changeFilter('texture')}>Texture</span>
       </div>
       <div className="collection_grid">

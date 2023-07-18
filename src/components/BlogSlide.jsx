@@ -112,7 +112,7 @@ export default function BlogSlide({ position, text, img, slide, children }) {
             </article>
             <div
               style={styles.bottom_img}
-              className='main_img'
+              className='main_img border-top'
             ></div>
           </div>
         </div>}

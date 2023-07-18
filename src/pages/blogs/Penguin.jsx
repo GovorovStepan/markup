@@ -1,7 +1,8 @@
-import React from 'react';
 import { useMediaQuery } from 'react-responsive';
 import Header from '../../components/Header';
-
+import { MutatingDots } from 'react-loader-spinner'
+import React, { useEffect, useState } from 'react';
+import { useNavigate } from 'react-router-dom'
 
 const styles = {
   slider_header: {
@@ -25,9 +26,45 @@ const styles = {
 };
 
 export default function Penguin() {
+  const navigate = useNavigate();
+
+  const moveTo = (value) => {
+    navigate(`${value}`, { replace: true });
+    window.scrollTo(0, 0);
+  }
 
   const isTablet = useMediaQuery({ query: '(max-width: 934px)' });
   const isMobile = useMediaQuery({ query: '(max-width: 600px)' });
+
+  // Set loading state to true initially
+  const [loading, setLoading] = useState(true);
+  useEffect(() => {
+    // Loading function to load data or
+    // fake it using setTimeout;
+    const loadData = async () => {
+
+      // Wait for two second
+      await new Promise((r) => setTimeout(r, 10));
+      console.log('dsss', loading)
+
+      // Toggle loading state
+      setLoading(!loading);
+    };
+
+    loadData();
+  }, [])
+  if (loading) {
+    return (<MutatingDots
+      height="100"
+      width="100"
+      color="#4fa94d"
+      secondaryColor='#4fa94d'
+      radius='12.5'
+      ariaLabel="mutating-dots-loading"
+      wrapperStyle={{ position: "absolute", top: `${window.innerHeight / 3}px` }}
+      wrapperClass=""
+      visible={true} />)
+  }
 
   styles.bottom_img = {
     background: `no-repeat center/100% url('../img/blog/penguin_main.png')`
@@ -72,14 +109,14 @@ export default function Penguin() {
                     }}>
 
                       <span>
-                      How I became{' '}
+                        How I became{' '}
                         <img
                           alt='background'
                           src='../img/blog/penguin_small_1.png'
                           className='text_img'
                         ></img>{' '}
                         <br />
-                        friends with one 
+                        friends with one
                         <br />
                         <img
                           alt='background'
@@ -93,10 +130,13 @@ export default function Penguin() {
                   <div>
                     <p style={styles.text_min}>Animals love to have fun too. Let me prove it to you.</p>
                   </div>
+                  <div>
+                    <button className='btn-primary' onClick={() => { moveTo('/blog') }}> Back</button>
+                  </div>
                 </article>
                 <div
                   style={styles.bottom_img}
-                  className='main_img'
+                  className='main_img  border-top'
                 ></div>
               </div>
               <div
@@ -106,7 +146,7 @@ export default function Penguin() {
               <div className="border-bottom" style={{
                 display: "flex"
               }}>
-                <div><img style={{ maxWidth: 82, height: "100%" }} src={`../img/blog/penguin/1_sm.png`}></img></div>
+                <div><img style={{ maxWidth: 82, height: "100%" }} src={`../img/blog/penguin/1_sm.png`} className='border-right'></img></div>
                 <div><p style={{
                   maxWidth: 247,
                   marginTop: 50,
@@ -125,7 +165,7 @@ export default function Penguin() {
                 className='border-bottom'
                 style={{ height: 50 }}
               ></div>
-              <div><img src={`../img/blog/penguin/3_sm.png`}></img></div>
+              <div><img src={`../img/blog/penguin/3_sm.png`} className='border-bottom'></img></div>
               <div
                 className='border-bottom'
                 style={{ height: 50 }}
@@ -152,7 +192,7 @@ export default function Penguin() {
 
 
                 </p></div>
-                <div><img style={{ maxWidth: 63, height: "100%" }} src={`../img/blog/penguin/4_sm.png`}></img></div>
+                <div><img style={{ maxWidth: 63, height: "100%" }} src={`../img/blog/penguin/4_sm.png`} className='border-left'></img></div>
               </div>
               <div
                 className='border-bottom'
@@ -171,11 +211,12 @@ export default function Penguin() {
                   My wonderful story about traveling with a penguin not only brought joy and laughter to people, but also reminded us to embrace the unexpected, find humor in the quirks of life, and cherish the unforgettable friendships we forged in our travels around the world.<br /><br />
 
                   Let this story become a legend, passed down from generation to generation as a testament to the whims and laughter that accompany even the most incredible adventures.
+                  <br />
+                  <span style={{ fontSize: 16 }}>20.05.2023</span>
                 </p>
-                <span style={{ fontSize: 14, marginLeft: 20 }}>20.05.2023</span>
               </div>
               <div>
-                <img src={`../img/blog/penguin/5_sm.png`}></img>
+                <img src={`../img/blog/penguin/5_sm.png`} className='border-top border-bottom'></img>
               </div>
             </div>
           </div> :
@@ -189,32 +230,35 @@ export default function Penguin() {
                   <article>
                     <div>
                       <div style={styles.text_big}>
-                      <span>
-                      How I became{' '}
-                        <img
-                          alt='background'
-                          src='../img/blog/penguin_small_1.png'
-                          className='text_img'
-                        ></img>{' '}
-                        <br />
-                        friends with one 
-                        <br />
-                        <img
-                          alt='background'
-                          src='../img/blog/penguin_small_2.png'
-                          className='text_img'
-                        ></img>{' '}
-                        penguin{' '}
-                      </span>
+                        <span>
+                          How I became{' '}
+                          <img
+                            alt='background'
+                            src='../img/blog/penguin_small_1.png'
+                            className='text_img'
+                          ></img>{' '}
+                          <br />
+                          friends with one
+                          <br />
+                          <img
+                            alt='background'
+                            src='../img/blog/penguin_small_2.png'
+                            className='text_img'
+                          ></img>{' '}
+                          penguin{' '}
+                        </span>
                       </div>
                     </div>
                     <div>
                       <p style={styles.text_min}>Animals love to have fun too. Let me prove it to you.</p>
                     </div>
+                    <div>
+                      <button className='btn-primary' onClick={() => { moveTo('/blog') }}> Back</button>
+                    </div>
                   </article>
                   <div
                     style={styles.bottom_img}
-                    className='main_img'
+                    className='main_img border-top'
                   ></div>
                 </div>
                 <div
@@ -224,7 +268,7 @@ export default function Penguin() {
                 <div className="border-bottom" style={{
                   display: "flex"
                 }}>
-                  <div><img style={{ maxWidth: 267, height: "100%" }} src={`../img/blog/penguin/1_mid.png`}></img></div>
+                  <div><img style={{ maxWidth: 267, height: "100%" }} src={`../img/blog/penguin/1_mid.png`} className='border-right'></img></div>
                   <div><p style={{
                     maxWidth: 448,
                     marginTop: 75,
@@ -243,7 +287,7 @@ export default function Penguin() {
                   className='border-bottom'
                   style={{ height: 100 }}
                 ></div>
-                <div><img src={`../img/blog/penguin/3_mid.png`}></img></div>
+                <div><img src={`../img/blog/penguin/3_mid.png`} className='border-bottom'></img></div>
                 <div
                   className='border-bottom'
                   style={{ height: 100 }}
@@ -268,7 +312,7 @@ export default function Penguin() {
 
 
                   </p></div>
-                  <div><img style={{ maxWidth: 267, height: "100%" }} src={`../img/blog/penguin/4_mid.png`}></img></div>
+                  <div><img style={{ maxWidth: 267, height: "100%" }} src={`../img/blog/penguin/4_mid.png`} className='border-left'></img></div>
                 </div>
                 <div
                   className='border-bottom'
@@ -287,12 +331,12 @@ export default function Penguin() {
                     My wonderful story about traveling with a penguin not only brought joy and laughter to people, but also reminded us to embrace the unexpected, find humor in the quirks of life, and cherish the unforgettable friendships we forged in our travels around the world.<br /><br />
 
                     Let this story become a legend, passed down from generation to generation as a testament to the whims and laughter that accompany even the most incredible adventures.
-
+                    <br />
+                    <span style={{ fontSize: 18 }}>20.05.2023</span>
                   </p>
-                  <span style={{ fontSize: 20, marginLeft: 65 }}>20.05.2023</span>
                 </div>
                 <div>
-                  <img src={`../img/blog/penguin/5_mid.png`}></img>
+                  <img src={`../img/blog/penguin/5_mid.png`} className='border-top border-bottom'></img>
                 </div>
               </div>
             </div>
@@ -310,15 +354,15 @@ export default function Penguin() {
                   <div>
 
                     <div style={styles.text_big}>
-                    <span>
-                      How I became{' '}
+                      <span>
+                        How I became{' '}
                         <img
                           alt='background'
                           src='../img/blog/penguin_small_1.png'
                           className='text_img'
                         ></img>{' '}
                         <br />
-                        friends with one 
+                        friends with one
                         <br />
                         <img
                           alt='background'
@@ -332,6 +376,9 @@ export default function Penguin() {
                   </div>
                   <div>
                     <p style={styles.text_min}>Animals love to have fun too. Let me prove it to you.</p>
+                  </div>
+                  <div>
+                    <button className='btn-primary' onClick={() => { moveTo('/blog') }}> Back</button>
                   </div>
                   {/* <button className='btn-primary'>Application</button> */}
                 </article>
@@ -366,7 +413,7 @@ export default function Penguin() {
                 className='border-bottom'
                 style={{ height: 100 }}
               ></div>
-              <div style={{ maxHeight: 803 }} ><img style={{ height: "100%" }} src={`../img/blog/penguin/3.png`}></img></div>
+              <div style={{ maxHeight: 803 }} ><img style={{ height: "100%" }} src={`../img/blog/penguin/3.png`} className='border-top border-bottom'></img></div>
               <div
                 className='border-bottom'
                 style={{ height: 100 }}
@@ -387,7 +434,7 @@ export default function Penguin() {
 
 
                 </p></div>
-                <div style={{ maxHeight: 572 }}><img style={{ height: "100%" }} src={`../img/blog/penguin/4.png`}></img></div>
+                <div style={{ maxHeight: 572 }}><img style={{ height: "100%" }} src={`../img/blog/penguin/4.png`} className='border-left'></img></div>
               </div>
               <div style={{ display: 'flex' }} className='border-bottom'>
                 <div><img style={{ height: "100%" }} src={`../img/blog/penguin/5.png`} className='border-right'></img></div>
@@ -405,9 +452,9 @@ export default function Penguin() {
                       My wonderful story about traveling with a penguin not only brought joy and laughter to people, but also reminded us to embrace the unexpected, find humor in the quirks of life, and cherish the unforgettable friendships we forged in our travels around the world.<br /><br />
 
                       Let this story become a legend, passed down from generation to generation as a testament to the whims and laughter that accompany even the most incredible adventures.
+                      <br />
+                      <span style={{ fontSize: 18 }}>20.05.2023</span>
                     </p>
-
-                    <span style={{ fontSize: 14, marginLeft: 20 }}>20.05.2023</span>
                   </div>
                 </div>
 

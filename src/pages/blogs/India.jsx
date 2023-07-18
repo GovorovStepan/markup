@@ -1,7 +1,8 @@
-import React from 'react';
 import { useMediaQuery } from 'react-responsive';
 import Header from '../../components/Header';
-
+import { MutatingDots } from 'react-loader-spinner'
+import React, { useEffect, useState } from 'react';
+import { useNavigate } from 'react-router-dom'
 
 const styles = {
   slider_header: {
@@ -26,8 +27,47 @@ const styles = {
 
 export default function India() {
 
+  const navigate = useNavigate();
+
+  const moveTo = (value) => {
+    navigate(`${value}`, { replace: true });
+    window.scrollTo(0, 0);
+  }
+
+
+
   const isTablet = useMediaQuery({ query: '(max-width: 934px)' });
   const isMobile = useMediaQuery({ query: '(max-width: 600px)' });
+
+  // Set loading state to true initially
+  const [loading, setLoading] = useState(true);
+  useEffect(() => {
+    // Loading function to load data or
+    // fake it using setTimeout;
+    const loadData = async () => {
+
+      // Wait for two second
+      await new Promise((r) => setTimeout(r, 10));
+      console.log('dsss', loading)
+
+      // Toggle loading state
+      setLoading(!loading);
+    };
+
+    loadData();
+  }, [])
+  if (loading) {
+    return (<MutatingDots
+      height="100"
+      width="100"
+      color="#4fa94d"
+      secondaryColor='#4fa94d'
+      radius='12.5'
+      ariaLabel="mutating-dots-loading"
+      wrapperStyle={{ position: "absolute", top: `${window.innerHeight / 3}px` }}
+      wrapperClass=""
+      visible={true} />)
+  }
 
   styles.bottom_img = {
     background: `no-repeat center/100% url('../img/blog/india_main.png')`
@@ -92,10 +132,13 @@ export default function India() {
                   <div>
                     <p style={styles.text_min}>Sometimes it's important to just relax not to think about what others think and do what you want.</p>
                   </div>
+                  <div>
+                    <button className='btn-primary' onClick={() => { moveTo('/blog') }}> Back</button>
+                  </div>
                 </article>
                 <div
                   style={styles.bottom_img}
-                  className='main_img'
+                  className='main_img border-top'
                 ></div>
               </div>
               <div
@@ -105,7 +148,7 @@ export default function India() {
               <div className="border-bottom" style={{
                 display: "flex"
               }}>
-                <div><img style={{ maxWidth: 82, height: "100%" }} src={`../img/blog/india/1_sm.png`}></img></div>
+                <div><img style={{ maxWidth: 82, height: "100%" }} src={`../img/blog/india/1_sm.png`} className='border-right'></img></div>
                 <div><p style={{
                   maxWidth: 247,
                   marginTop: 50,
@@ -121,7 +164,7 @@ export default function India() {
                 className='border-bottom'
                 style={{ height: 50 }}
               ></div>
-              <div><img src={`../img/blog/india/3_sm.png`}></img></div>
+              <div><img src={`../img/blog/india/3_sm.png`} className='border-top border-bottom'></img></div>
               <div
                 className='border-bottom'
                 style={{ height: 50 }}
@@ -142,7 +185,7 @@ export default function India() {
                 }}>Undeterred by his previous escapades, I ventured to the bustling streets of Mumbai, where I decided to embrace the city's vibrant dance culture. Donning colorful attire, I joined a group of enthusiastic street dancers, attempting to imitate their energetic moves. <br /><br />
 
                   Unbeknownst to I, my lack of coordination and rhythm transformed me dance routine into a sideshow comedy act, leaving bystanders in stitches. With every misstep, my infectious laughter filled the air, turning my failed dance routine into a joyful spectacle that brought people from all corners of the city together.</p></div>
-                <div><img style={{ maxWidth: 63, height: "100%" }} src={`../img/blog/india/4_sm.png`}></img></div>
+                <div><img style={{ maxWidth: 63, height: "100%" }} src={`../img/blog/india/4_sm.png`} className='border-left'></img></div>
               </div>
               <div
                 className='border-bottom'
@@ -161,11 +204,12 @@ export default function India() {
                   It was all so funny. I like that not only I laughed, but also the people around me. We brought joy to this world, what could be better than this. I am grateful to every person I met, talked to, laughed with. It is an incredible gift to treat everything with love. The people are so kind, funny and welcoming. What could be better than talking to them. Find out how they live in this country, how they look at the world, whether they are happy with life. <br /><br />
 
                   Saying goodbye to India, I took with me not only memories of laughter, but also a newfound understanding of the beauty of imperfection. I hope to inspire you to embrace the unpredictable and find humor in every step of your travels around the world.
+                  <br />
+                  <span style={{ fontSize: 14 }}>20.05.2023</span>
                 </p>
-                <span style={{ fontSize: 14, marginLeft: 20 }}>20.05.2023</span>
               </div>
               <div>
-                <img src={`../img/blog/india/5_sm.png`}></img>
+                <img src={`../img/blog/india/5_sm.png`} className='border-top border-bottom'></img>
               </div>
             </div>
           </div> :
@@ -201,10 +245,13 @@ export default function India() {
                     <div>
                       <p style={styles.text_min}>Sometimes it's important to just relax not to think about what others think and do what you want.</p>
                     </div>
+                    <div>
+                      <button className='btn-primary' onClick={() => { moveTo('/blog') }}> Back</button>
+                    </div>
                   </article>
                   <div
                     style={styles.bottom_img}
-                    className='main_img'
+                    className='main_img border-top'
                   ></div>
                 </div>
                 <div
@@ -214,7 +261,7 @@ export default function India() {
                 <div className="border-bottom" style={{
                   display: "flex"
                 }}>
-                  <div><img style={{ maxWidth: 267, height: "100%" }} src={`../img/blog/india/1_mid.png`}></img></div>
+                  <div><img style={{ maxWidth: 267, height: "100%" }} src={`../img/blog/india/1_mid.png`} className='border-right'></img></div>
                   <div><p style={{
                     maxWidth: 448,
                     marginTop: 75,
@@ -230,7 +277,7 @@ export default function India() {
                   className='border-bottom'
                   style={{ height: 100 }}
                 ></div>
-                <div><img src={`../img/blog/india/3_mid.png`}></img></div>
+                <div><img src={`../img/blog/india/3_mid.png`} className='border-top border-bottom'></img></div>
                 <div
                   className='border-bottom'
                   style={{ height: 100 }}
@@ -251,7 +298,7 @@ export default function India() {
                   }}>Undeterred by his previous escapades, I ventured to the bustling streets of Mumbai, where I decided to embrace the city's vibrant dance culture. Donning colorful attire, I joined a group of enthusiastic street dancers, attempting to imitate their energetic moves. <br /><br />
 
                     Unbeknownst to I, my lack of coordination and rhythm transformed me dance routine into a sideshow comedy act, leaving bystanders in stitches. With every misstep, my infectious laughter filled the air, turning my failed dance routine into a joyful spectacle that brought people from all corners of the city together.</p></div>
-                  <div><img style={{ maxWidth: 267, height: "100%" }} src={`../img/blog/india/4_mid.png`}></img></div>
+                  <div><img style={{ maxWidth: 267, height: "100%" }} src={`../img/blog/india/4_mid.png`} className='border-left'></img></div>
                 </div>
                 <div
                   className='border-bottom'
@@ -270,11 +317,12 @@ export default function India() {
                     It was all so funny. I like that not only I laughed, but also the people around me. We brought joy to this world, what could be better than this. I am grateful to every person I met, talked to, laughed with. It is an incredible gift to treat everything with love. The people are so kind, funny and welcoming. What could be better than talking to them. Find out how they live in this country, how they look at the world, whether they are happy with life. <br /><br />
 
                     Saying goodbye to India, I took with me not only memories of laughter, but also a newfound understanding of the beauty of imperfection. I hope to inspire you to embrace the unpredictable and find humor in every step of your travels around the world.
+                    <br />
+                    <span style={{ fontSize: 18 }}>20.05.2023</span>
                   </p>
-                  <span style={{ fontSize: 20, marginLeft: 65 }}>20.05.2023</span>
                 </div>
                 <div>
-                  <img src={`../img/blog/india/5_mid.png`}></img>
+                  <img src={`../img/blog/india/5_mid.png`} className='border-top border-bottom'></img>
                 </div>
               </div>
             </div>
@@ -315,6 +363,9 @@ export default function India() {
                   <div>
                     <p style={styles.text_min}>Sometimes it's important to just relax not to think about what others think and do what you want.</p>
                   </div>
+                  <div>
+                    <button className='btn-primary' onClick={() => { moveTo('/blog') }}> Back</button>
+                  </div>
                   {/* <button className='btn-primary'>Application</button> */}
                 </article>
                 <img
@@ -346,7 +397,7 @@ export default function India() {
                 className='border-bottom'
                 style={{ height: 100 }}
               ></div>
-              <div style={{ maxHeight: 803 }} ><img style={{ height: "100%" }} src={`../img/blog/india/3.png`}></img></div>
+              <div style={{ maxHeight: 803 }} ><img style={{ height: "100%" }} src={`../img/blog/india/3.png`} className='border-top border-bottom'></img></div>
               <div
                 className='border-bottom'
                 style={{ height: 100 }}
@@ -381,8 +432,10 @@ export default function India() {
                       It was all so funny. I like that not only I laughed, but also the people around me. We brought joy to this world, what could be better than this. I am grateful to every person I met, talked to, laughed with. It is an incredible gift to treat everything with love. The people are so kind, funny and welcoming. What could be better than talking to them. Find out how they live in this country, how they look at the world, whether they are happy with life.<br /><br />
 
                       Saying goodbye to India, I took with me not only memories of laughter, but also a newfound understanding of the beauty of imperfection. I hope to inspire you to embrace the unpredictable and find humor in every step of your travels around the world.
+                      <br />
+                      <span style={{ fontSize: 18 }}>20.05.2023</span>
                     </p>
-                    <span style={{ fontSize: 14, marginLeft: 20 }}>20.05.2023</span>
+                    
                   </div>
                 </div>
 

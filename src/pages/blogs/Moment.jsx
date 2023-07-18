@@ -1,7 +1,8 @@
-import React from 'react';
 import { useMediaQuery } from 'react-responsive';
 import Header from '../../components/Header';
-
+import { MutatingDots } from 'react-loader-spinner'
+import React, { useEffect, useState } from 'react';
+import { useNavigate } from 'react-router-dom'
 const styles = {
   slider_header: {
     height: 100,
@@ -24,9 +25,45 @@ const styles = {
 };
 
 export default function Moment() {
+  const navigate = useNavigate();
+
+  const moveTo = (value) => {
+    navigate(`${value}`, { replace: true });
+    window.scrollTo(0, 0);
+  }
 
   const isTablet = useMediaQuery({ query: '(max-width: 934px)' });
   const isMobile = useMediaQuery({ query: '(max-width: 600px)' });
+
+  // Set loading state to true initially
+  const [loading, setLoading] = useState(true);
+  useEffect(() => {
+    // Loading function to load data or
+    // fake it using setTimeout;
+    const loadData = async () => {
+
+      // Wait for two second
+      await new Promise((r) => setTimeout(r, 10));
+      console.log('dsss', loading)
+
+      // Toggle loading state
+      setLoading(!loading);
+    };
+
+    loadData();
+  }, [])
+  if (loading) {
+    return (<MutatingDots
+      height="100"
+      width="100"
+      color="#4fa94d"
+      secondaryColor='#4fa94d'
+      radius='12.5'
+      ariaLabel="mutating-dots-loading"
+      wrapperStyle={{ position: "absolute", top: `${window.innerHeight / 3}px` }}
+      wrapperClass=""
+      visible={true} />)
+  }
 
   styles.bottom_img = {
     background: `no-repeat center/100% url('../img/blog/moments_main.png')`
@@ -92,10 +129,13 @@ export default function Moment() {
                   <div>
                     <p style={styles.text_min}>You can’t even guess how one white lady took and changed my day 180 degrees.</p>
                   </div>
+                  <div>
+                    <button className='btn-primary' onClick={() => { moveTo('/blog') }}> Back</button>
+                  </div>
                 </article>
                 <div
                   style={styles.bottom_img}
-                  className='main_img'
+                  className='main_img border-top'
                 ></div>
               </div>
               <div
@@ -105,7 +145,7 @@ export default function Moment() {
               <div className="border-bottom" style={{
                 display: "flex"
               }}>
-                <div><img style={{ maxWidth: 82, height: "100%" }} src={`../img/blog/moment/1_sm.png`}></img></div>
+                <div><img style={{ maxWidth: 82, height: "100%" }} src={`../img/blog/moment/1_sm.png`} className='border-right'></img></div>
                 <div><p style={{
                   maxWidth: 247,
                   marginTop: 50,
@@ -124,7 +164,7 @@ export default function Moment() {
                 className='border-bottom'
                 style={{ height: 50 }}
               ></div>
-              <div><img src={`../img/blog/moment/3_sm.png`}></img></div>
+              <div><img src={`../img/blog/moment/3_sm.png`} className='border-bottom'></img></div>
               <div
                 className='border-bottom'
                 style={{ height: 50 }}
@@ -149,7 +189,7 @@ export default function Moment() {
 
 
                 </p></div>
-                <div><img style={{ maxWidth: 63, height: "100%" }} src={`../img/blog/moment/4_sm.png`}></img></div>
+                <div><img style={{ maxWidth: 63, height: "100%" }} src={`../img/blog/moment/4_sm.png`} className='border-left'></img></div>
               </div>
               <div
                 className='border-bottom'
@@ -166,11 +206,13 @@ export default function Moment() {
                   lineHeight: "25px"
                 }}>
                   Saying goodbye to Italy, I took with me not only the memories of breathtaking landscapes and rich history, but also the laughter and joy that I shared with people from all walks of life. I hope my unintentional comedy adventures will remind everyone that laughter knows no language or boundaries.
+                  <br />
+                  <span style={{ fontSize: 16 }}>20.05.2023</span>
                 </p>
-                <span style={{ fontSize: 14, marginLeft: 20 }}>20.05.2023</span>
+
               </div>
               <div>
-                <img src={`../img/blog/moment/5_sm.png`}></img>
+                <img src={`../img/blog/moment/5_sm.png`} className='border-top border-bottom'></img>
               </div>
             </div>
           </div> :
@@ -206,10 +248,13 @@ export default function Moment() {
                     <div>
                       <p style={styles.text_min}>You can’t even guess how one white lady took and changed my day 180 degrees.</p>
                     </div>
+                    <div>
+                      <button className='btn-primary' onClick={() => { moveTo('/blog') }}> Back</button>
+                    </div>
                   </article>
                   <div
                     style={styles.bottom_img}
-                    className='main_img'
+                    className='main_img border-top'
                   ></div>
                 </div>
                 <div
@@ -219,7 +264,7 @@ export default function Moment() {
                 <div className="border-bottom" style={{
                   display: "flex"
                 }}>
-                  <div><img style={{ maxWidth: 267, height: "100%" }} src={`../img/blog/moment/1_mid.png`}></img></div>
+                  <div><img style={{ maxWidth: 267, height: "100%" }} src={`../img/blog/moment/1_mid.png`} className='border-right'></img></div>
                   <div><p style={{
                     maxWidth: 448,
                     marginTop: 75,
@@ -238,7 +283,7 @@ export default function Moment() {
                   className='border-bottom'
                   style={{ height: 100 }}
                 ></div>
-                <div><img src={`../img/blog/moment/3_mid.png`}></img></div>
+                <div><img src={`../img/blog/moment/3_mid.png`} className='border-bottom'></img></div>
                 <div
                   className='border-bottom'
                   style={{ height: 100 }}
@@ -265,7 +310,7 @@ export default function Moment() {
 
 
                   </p></div>
-                  <div><img style={{ maxWidth: 267, height: "100%" }} src={`../img/blog/moment/4_mid.png`}></img></div>
+                  <div><img style={{ maxWidth: 267, height: "100%" }} src={`../img/blog/moment/4_mid.png`} className='border-righ'></img></div>
                 </div>
                 <div
                   className='border-bottom'
@@ -282,11 +327,13 @@ export default function Moment() {
                     fontSize: 28
                   }}>
                     Saying goodbye to Italy, I took with me not only the memories of breathtaking landscapes and rich history, but also the laughter and joy that I shared with people from all walks of life. I hope my unintentional comedy adventures will remind everyone that laughter knows no language or boundaries.
+                    
+                    <br />
+                    <span style={{ fontSize: 18 }}>20.05.2023</span>
                   </p>
-                  <span style={{ fontSize: 20, marginLeft: 65 }}>20.05.2023</span>
                 </div>
                 <div>
-                  <img src={`../img/blog/moment/5_mid.png`}></img>
+                  <img src={`../img/blog/moment/5_mid.png`} className='border-top border-bottom'></img>
                 </div>
               </div>
             </div>
@@ -327,6 +374,9 @@ export default function Moment() {
                   <div>
                     <p style={styles.text_min}>You can’t even guess how one white lady took and changed my day 180 degrees.</p>
                   </div>
+                  <div>
+                    <button className='btn-primary' onClick={() => { moveTo('/blog') }}> Back</button>
+                  </div>
                   {/* <button className='btn-primary'>Application</button> */}
                 </article>
                 <img
@@ -361,7 +411,7 @@ export default function Moment() {
                 className='border-bottom'
                 style={{ height: 100 }}
               ></div>
-              <div style={{ maxHeight: 803 }} ><img style={{ height: "100%" }} src={`../img/blog/moment/3.png`}></img></div>
+              <div style={{ maxHeight: 803 }} ><img style={{ height: "100%" }} src={`../img/blog/moment/3.png`} className='border-bottm'></img></div>
               <div
                 className='border-bottom'
                 style={{ height: 100 }}
@@ -383,7 +433,7 @@ export default function Moment() {
 
 
                 </p></div>
-                <div style={{ maxHeight: 572 }}><img style={{ height: "100%" }} src={`../img/blog/moment/4.png`}></img></div>
+                <div style={{ maxHeight: 572 }}><img style={{ height: "100%" }} src={`../img/blog/moment/4.png`} className='border-left'></img></div>
               </div>
               <div style={{ display: 'flex' }} className='border-bottom'>
                 <div><img style={{ height: "100%" }} src={`../img/blog/moment/5.png`} className='border-right'></img></div>
@@ -399,8 +449,10 @@ export default function Moment() {
                     }}>
 
                       Saying goodbye to Italy, I took with me not only the memories of breathtaking landscapes and rich history, but also the laughter and joy that I shared with people from all walks of life. I hope my unintentional comedy adventures will remind everyone that laughter knows no language or boundaries.
+                      <br />
+                      <span style={{ fontSize: 18 }}>20.05.2023</span>
                     </p>
-                    <span style={{ fontSize: 14, marginLeft: 132 }}>20.05.2023</span>
+
                   </div>
                 </div>
 
