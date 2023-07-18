@@ -56,8 +56,8 @@ export default function Main() {
     return (<MutatingDots 
       height="100"
       width="100"
-      color="#4fa94d"
-      secondaryColor='#4fa94d'
+      color="black"
+      secondaryColor='black'
       radius='12.5'
       ariaLabel="mutating-dots-loading"
       wrapperStyle={{position: "absolute", top: `${window.innerHeight/3}px`}}
@@ -111,6 +111,7 @@ export default function Main() {
             <img
               alt='background'
               src='./img/main/sm/1.png'
+              className='border-top border-bottom'
             ></img>
           </div>
           <div>
@@ -144,7 +145,7 @@ export default function Main() {
               <img
                 alt='background'
                 src='./img/main/sm/2.png'
-                className='border-bottom'
+                className='border-bottom border-top'
               ></img>
             </div>
           </div>
@@ -285,6 +286,7 @@ export default function Main() {
                 alt='background'
                 src='./img/main/sm/5.png'
                 style={{ height: '100%' }}
+                className='border-top border-bottom'
               ></img>
             </div>
             <div>
@@ -323,7 +325,7 @@ export default function Main() {
               <img
                 alt='background'
                 src='./img/main/sm/6.png'
-                className='border-bottom'
+                className='border-bottom border-top'
                 style={{ height: '100%' }}
               ></img>
             </div>
@@ -409,6 +411,7 @@ export default function Main() {
             <img
               alt='background '
               src='./img/main/sm/7.png'
+              className='border-top border-bottom'
             ></img>
           </div>
         </div> : isTablet ?
