@@ -171,7 +171,8 @@ export default function Life() {
               ></div>
 
               <div className="border-bottom" style={{
-                display: "flex"
+                display: "flex",
+                justifyContent: "space-between"
               }}>
 
                 <div><p style={{
@@ -290,7 +291,8 @@ export default function Life() {
                 ></div>
 
                 <div className="border-bottom" style={{
-                  display: "flex"
+                  display: "flex",
+                  justifyContent: "space-between"
                 }}>
 
                   <div><p style={{
