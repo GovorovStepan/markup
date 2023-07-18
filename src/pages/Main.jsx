@@ -54,14 +54,14 @@ export default function Main() {
 
 
   if (loading) {
-    return (<MutatingDots 
+    return (<MutatingDots
       height="100"
       width="100"
       color="black"
       secondaryColor='black'
       radius='12.5'
       ariaLabel="mutating-dots-loading"
-      wrapperStyle={{position: "absolute", top: `${window.innerHeight/3}px`}}
+      wrapperStyle={{ position: "absolute", top: `${window.innerHeight / 3}px` }}
       wrapperClass=""
       visible={true} />)
   }
@@ -101,13 +101,13 @@ export default function Main() {
                 </p>
               </div>
               <div>
-                <p style={{marginTop: -12,   marginBottom: 30}}>
+                <p style={{ marginTop: -12, marginBottom: 30 }}>
                   I create photos that touch your soul,
                   <br /> looking at them you will not be able to
                   <br /> remain indifferent
                 </p>
               </div>
-              <button className='btn-primary'><Link to='/#collection' smooth = 'true' >Learn more</Link></button>
+              <button className='btn-primary'><Link to='/#collection' smooth='true' >Learn more</Link></button>
             </article>
             <img
               alt='background'
@@ -378,7 +378,7 @@ export default function Main() {
               <div style={{
 
               }}>
-                <p style={{ margin: 0, marginBottom: 24}}>
+                <p style={{ margin: 0, marginBottom: 24 }}>
                   <div style={{ fontSize: "12px", marginBottom: 10 }}>email</div>
                   <div style={{ fontSize: "24px" }}>
                     <a href='mailto:photobuy@gmail.com'>photobuy@gmail.com</a>
@@ -447,7 +447,7 @@ export default function Main() {
                     <br /> remain indifferent
                   </p>
                 </div>
-                <button className='btn-primary'><Link to='/#collection' smooth = 'true' >Learn more</Link></button>
+                <button className='btn-primary'><Link to='/#collection' smooth='true' >Learn more</Link></button>
               </article>
               <img
                 alt='background'
@@ -662,6 +662,31 @@ export default function Main() {
                     style={{ padding: 0, paddingTop: 20, paddingBottom: 40 }}
                     src='./img/main/mid/5.png'
                   ></img>
+                  <img alt='dot' style={{
+
+                    left: -160,
+                    top: -130
+                  }} src='./img/main/dot.svg' className='dot'></img>
+                  <img style={{
+
+                    right: -10,
+                    top: -330
+                  }} alt='dot' src='./img/main/dot.svg' className='dot'></img>
+                  <img style={{
+
+                    left: 175,
+                    top: -290
+                  }} alt='dot' src='./img/main/dot.svg' className='dot'></img>
+                  <img style={{
+
+                    left: 240,
+                    top: -360
+                  }} alt='dot' src='./img/main/dot.svg' className='dot'></img>
+                  <img style={{
+
+                    left: 242,
+                    top: -260
+                  }} alt='dot' src='./img/main/dot.svg' className='dot'></img>
                   <div>
                     <button className='btn-primary' onClick={() => { moveTo('/collection') }}> See photo</button>
                   </div>
@@ -690,21 +715,25 @@ export default function Main() {
                 className='d-flex justify-content-space-around'
               >
                 <BlogCard
+                 size='mid'
                   header='Adventure in India'
                   img='main_1.png'
                   text="Sometimes it's important to just relax not to think about what others think and do what you want."
                 />
                 <BlogCard
+                 size='mid'
                   img='main_2.png'
                   header='Friend penguin'
                   text='Animals love to have fun too. Let me prove it to you.'
                 />
                 <BlogCard
+                 size='mid'
                   img='main_3.png'
                   header='Happiest is laughter'
                   text='Laughter will always help to get out of any situation. A sense of humor is definitely the most important thing in our life.'
                 />
                 <BlogCard
+                  size='mid'
                   img='main_4.png'
                   header='Unexpected moments'
                   text='You can’t even guess how one white lady took and changed my day 180 degrees.'
@@ -800,7 +829,7 @@ export default function Main() {
                     <br /> remain indifferent
                   </p>
                 </div>
-                <button className='btn-primary'><Link to='/#collection' smooth = 'true' >Learn more</Link></button>
+                <button className='btn-primary'><Link to='/#collection' smooth='true' >Learn more</Link></button>
               </article>
             </div>
             <div className='second_slide slide border-top'>
@@ -1105,6 +1134,31 @@ export default function Main() {
                         id='map'
                         src='./img/main/main_eight_slide_img_2.svg'
                       ></img>
+                      <img alt='dot' style={{
+
+                        left: -260,
+                        top: -180
+                      }} src='./img/main/dot.svg' className='dot'></img>
+                      <img style={{
+
+                        right: -13,
+                        top: -515
+                      }} alt='dot' src='./img/main/dot.svg' className='dot'></img>
+                      <img style={{
+
+                        left: 250,
+                        top: -455
+                      }} alt='dot' src='./img/main/dot.svg' className='dot'></img>
+                      <img style={{
+
+                        left: 350,
+                        top: -520
+                      }} alt='dot' src='./img/main/dot.svg' className='dot'></img>
+                      <img style={{
+
+                        left: 350,
+                        top: -394
+                      }} alt='dot' src='./img/main/dot.svg' className='dot'></img>
                       <div>
                         <button className='btn-primary' onClick={() => { moveTo('/collection') }}> See photo</button>
                       </div>
