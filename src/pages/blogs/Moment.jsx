@@ -196,7 +196,7 @@ export default function Moment() {
                 className='border-bottom'
                 style={{ height: 50 }}
               ></div>
-              <div style={{ marginBottom: 52 }}>
+              <div style={{ marginBottom: 20 }}>
                 <p style={{
                   maxWidth: 700,
                   marginTop: 50,
