@@ -311,7 +311,7 @@ export default function Main() {
                 <img
                   alt='background'
                   id='map'
-                  style={{ padding: "80px" }}
+                  style={{ padding: 0, paddingTop: 20, paddingBottom: 40 }}
                   src='./img/main/sm/map.svg'
                 ></img>
                 <div>
@@ -661,7 +661,7 @@ export default function Main() {
                   <img
                     alt='background'
                     id='map'
-                    style={{ padding: "80px" }}
+                    style={{ padding: 0, paddingTop: 20, paddingBottom: 40 }}
                     src='./img/main/mid/5.png'
                   ></img>
                   <div>
