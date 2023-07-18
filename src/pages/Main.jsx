@@ -377,26 +377,23 @@ export default function Main() {
               <div style={{
 
               }}>
-                <p>
-                  <span style={{ fontSize: "12px" }}>email</span>
-                  <br />
-                  <span style={{ fontSize: "24px" }}>
+                <p style={{ margin: 0, marginBottom: 24}}>
+                  <div style={{ fontSize: "12px", marginBottom: 10 }}>email</div>
+                  <div style={{ fontSize: "24px" }}>
                     <a href='mailto:photobuy@gmail.com'>photobuy@gmail.com</a>
-                  </span>
+                  </div>
                 </p>
-                <br />
                 <p>
-                  <span style={{ fontSize: "12px" }}>telegram</span>
-                  <br />
-                  <span style={{ fontSize: "24px" }}>
+                  <div style={{ fontSize: "12px", marginBottom: 10 }}>telegram</div>
+                  <div style={{ fontSize: "24px" }}>
                     <a href='https://www.telegram.com'>ann_korn</a>
-                  </span>
+                  </div>
                 </p>
               </div>
 
 
               <p style={{
-                marginTop: 40, fontSize: "16px", fontFamily: "Open Sans",
+                marginTop: 24, fontSize: "16px", fontFamily: "Open Sans",
                 fontStyle: "normal", lineHeight: "normal",
                 fontWeight: 400,
               }}>
