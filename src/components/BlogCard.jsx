@@ -1,32 +1,39 @@
+import { useMediaQuery } from 'react-responsive';
 const styles = {
   container: {
     border: '2px solid #000000',
     maxWidth: 370,
   },
   img_wrapper: {
-    padding: '20px 0',
+    padding: '20px 20px 15px 20px ',
     maxWidth: 330,
   },
   text_wrapper: {
-    padding: '0 20px 24px 20px',
+    padding: '0 20px 20px 20px',
   },
   header: {
     fontFamily: 'Open Sans',
     fontStyle: 'normal',
     fontWeight: 400,
-    fontSize: 32,
+    fontSize: 28,
     lineHeight: '44px',
   },
   text: {
     fontFamily: 'Open Sans',
     fontStyle: 'normal',
     fontWeight: 400,
-    ffontSize: 16,
+    fontSize: 16,
     lineHeight: '22px',
+    marginTop: 9,
+    marginBottom: 0
   },
 };
 
+
 export default function BlogCard({ header, img, text, size = "normal" }) {
+
+  const isTablet = useMediaQuery({ query: '(max-width: 934px)' });
+  const isMobile = useMediaQuery({ query: '(max-width: 600px)' });
 
   switch (size) {
     case "mid":
@@ -35,12 +42,25 @@ export default function BlogCard({ header, img, text, size = "normal" }) {
         maxWidth: 350,
       }
       styles.img_wrapper =  {
-        padding: '20px 0',
+        padding: '20px',
         maxWidth: 300,
       }
       break;
   
   }
+
+  if(isMobile){
+    styles.text = {
+      fontFamily: 'Open Sans',
+      fontStyle: 'normal',
+      fontWeight: 400,
+      fontSize: 16,
+      lineHeight: '22px',
+      marginTop: 5,
+      marginBottom: 0
+    }
+  }
+
   return (
     <div
       style={styles.container}
