@@ -77,6 +77,7 @@ export default function Life() {
       fontSize: "18px",
       lineHeight: '25px',
       maxWidth: 330,
+      marginTop: 4,   marginBottom: 30
     }
     styles.slider_header = {
       height: 50,
@@ -207,8 +208,7 @@ export default function Life() {
                   Thank you for joining me and my stories. I hope you've had fun as you embark on a noisy journey through this enchanting island. My comical encounters left an indelible mark on the hearts of both locals and fellow travelers.<br /><br />
 
                   Saying goodbye to Bali, I took with me not only the memories of the picturesque landscapes, but also the laughter and joy that I shared with the people I met along the way. I hope my carefree disposition and ability to find humor in any situation have left an indelible mark on the island, reminding both locals and travelers to embrace life's comedic moments and approach every adventure with a smile.
-                  <br />
-                  <span style={{ fontSize: 16 }}>20.05.2023</span>
+                  <div style={{ fontSize: 16, marginTop: 30 }}>20.05.2023</div>
                 </p>
               </div>
               <div>
@@ -328,8 +328,7 @@ export default function Life() {
                     Thank you for joining me and my stories. I hope you've had fun as you embark on a noisy journey through this enchanting island. My comical encounters left an indelible mark on the hearts of both locals and fellow travelers.<br /><br />
 
                     Saying goodbye to Bali, I took with me not only the memories of the picturesque landscapes, but also the laughter and joy that I shared with the people I met along the way. I hope my carefree disposition and ability to find humor in any situation have left an indelible mark on the island, reminding both locals and travelers to embrace life's comedic moments and approach every adventure with a smile.
-                    <br />
-                    <span style={{ fontSize: 18 }}>20.05.2023</span>
+                    <div style={{ fontSize: 20, marginTop: 30 }}>20.05.2023</div>
                   </p>
                 </div>
                 <div>
@@ -451,8 +450,7 @@ export default function Life() {
                       Thank you for joining me and my stories. I hope you've had fun as you embark on a noisy journey through this enchanting island. My comical encounters left an indelible mark on the hearts of both locals and fellow travelers.<br /><br />
 
                       Saying goodbye to Bali, I took with me not only the memories of the picturesque landscapes, but also the laughter and joy that I shared with the people I met along the way. I hope my carefree disposition and ability to find humor in any situation have left an indelible mark on the island, reminding both locals and travelers to embrace life's comedic moments and approach every adventure with a smile.
-                      <br />
-                      <span style={{ fontSize: 18 }}>20.05.2023</span>
+                      <div style={{ fontSize: 20, marginTop: 30 }}>20.05.2023</div>
                     </p>
                   </div>
                 </div>

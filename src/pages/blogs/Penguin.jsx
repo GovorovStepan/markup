@@ -78,6 +78,7 @@ export default function Penguin() {
       fontSize: "18px",
       lineHeight: '25px',
       maxWidth: 330,
+      marginTop: 4,   marginBottom: 30
     }
     styles.slider_header = {
       height: 50,
@@ -211,8 +212,7 @@ export default function Penguin() {
                   My wonderful story about traveling with a penguin not only brought joy and laughter to people, but also reminded us to embrace the unexpected, find humor in the quirks of life, and cherish the unforgettable friendships we forged in our travels around the world.<br /><br />
 
                   Let this story become a legend, passed down from generation to generation as a testament to the whims and laughter that accompany even the most incredible adventures.
-                  <br />
-                  <span style={{ fontSize: 16 }}>20.05.2023</span>
+                  <div style={{ fontSize: 16, marginTop: 30 }}>20.05.2023</div>
                 </p>
               </div>
               <div>
@@ -331,8 +331,7 @@ export default function Penguin() {
                     My wonderful story about traveling with a penguin not only brought joy and laughter to people, but also reminded us to embrace the unexpected, find humor in the quirks of life, and cherish the unforgettable friendships we forged in our travels around the world.<br /><br />
 
                     Let this story become a legend, passed down from generation to generation as a testament to the whims and laughter that accompany even the most incredible adventures.
-                    <br />
-                    <span style={{ fontSize: 18 }}>20.05.2023</span>
+                    <div style={{ fontSize: 20, marginTop: 30 }}>20.05.2023</div>
                   </p>
                 </div>
                 <div>
@@ -452,8 +451,7 @@ export default function Penguin() {
                       My wonderful story about traveling with a penguin not only brought joy and laughter to people, but also reminded us to embrace the unexpected, find humor in the quirks of life, and cherish the unforgettable friendships we forged in our travels around the world.<br /><br />
 
                       Let this story become a legend, passed down from generation to generation as a testament to the whims and laughter that accompany even the most incredible adventures.
-                      <br />
-                      <span style={{ fontSize: 18 }}>20.05.2023</span>
+                      <div style={{ fontSize: 20, marginTop: 30 }}>20.05.2023</div>
                     </p>
                   </div>
                 </div>

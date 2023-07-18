@@ -60,6 +60,7 @@ export default function BlogSlide({ position, text, img, slide, children }) {
         fontSize: "18px",
         lineHeight: '25px',
         maxWidth: 330,
+        marginTop: 4,   marginBottom: 30
       }
       styles.slider_header = {
         height: 50,
@@ -106,7 +107,7 @@ export default function BlogSlide({ position, text, img, slide, children }) {
             <article>
               <div>{children}</div>
               <div>
-                <p style={styles.text_min}>{text}</p>
+                <p style={styles.text_min} >{text}</p>
               </div>
               <button className='btn-primary' onClick={() => openBlog(slide)}>See</button>
             </article>

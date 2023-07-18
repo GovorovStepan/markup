@@ -77,6 +77,7 @@ export default function Moment() {
       fontSize: "18px",
       lineHeight: '25px',
       maxWidth: 330,
+      marginTop: 4,   marginBottom: 30
     }
     styles.slider_header = {
       height: 50,
@@ -206,8 +207,7 @@ export default function Moment() {
                   lineHeight: "25px"
                 }}>
                   Saying goodbye to Italy, I took with me not only the memories of breathtaking landscapes and rich history, but also the laughter and joy that I shared with people from all walks of life. I hope my unintentional comedy adventures will remind everyone that laughter knows no language or boundaries.
-                  <br />
-                  <span style={{ fontSize: 16 }}>20.05.2023</span>
+                  <div style={{ fontSize: 16, marginTop: 30 }}>20.05.2023</div>
                 </p>
 
               </div>
@@ -328,8 +328,7 @@ export default function Moment() {
                   }}>
                     Saying goodbye to Italy, I took with me not only the memories of breathtaking landscapes and rich history, but also the laughter and joy that I shared with people from all walks of life. I hope my unintentional comedy adventures will remind everyone that laughter knows no language or boundaries.
                     
-                    <br />
-                    <span style={{ fontSize: 18 }}>20.05.2023</span>
+                    <div style={{ fontSize: 20, marginTop: 30 }}>20.05.2023</div>
                   </p>
                 </div>
                 <div>
@@ -449,8 +448,7 @@ export default function Moment() {
                     }}>
 
                       Saying goodbye to Italy, I took with me not only the memories of breathtaking landscapes and rich history, but also the laughter and joy that I shared with people from all walks of life. I hope my unintentional comedy adventures will remind everyone that laughter knows no language or boundaries.
-                      <br />
-                      <span style={{ fontSize: 18 }}>20.05.2023</span>
+                      <div style={{ fontSize: 20, marginTop: 30 }}>20.05.2023</div>
                     </p>
 
                   </div>

@@ -81,6 +81,7 @@ export default function India() {
       fontSize: "18px",
       lineHeight: '25px',
       maxWidth: 330,
+      marginTop: 4,   marginBottom: 30
     }
     styles.slider_header = {
       height: 50,
@@ -204,8 +205,7 @@ export default function India() {
                   It was all so funny. I like that not only I laughed, but also the people around me. We brought joy to this world, what could be better than this. I am grateful to every person I met, talked to, laughed with. It is an incredible gift to treat everything with love. The people are so kind, funny and welcoming. What could be better than talking to them. Find out how they live in this country, how they look at the world, whether they are happy with life. <br /><br />
 
                   Saying goodbye to India, I took with me not only memories of laughter, but also a newfound understanding of the beauty of imperfection. I hope to inspire you to embrace the unpredictable and find humor in every step of your travels around the world.
-                  <br />
-                  <span style={{ fontSize: 14 }}>20.05.2023</span>
+                  <div style={{ fontSize: 16, marginTop: 30 }}>20.05.2023</div>
                 </p>
               </div>
               <div>
@@ -317,8 +317,7 @@ export default function India() {
                     It was all so funny. I like that not only I laughed, but also the people around me. We brought joy to this world, what could be better than this. I am grateful to every person I met, talked to, laughed with. It is an incredible gift to treat everything with love. The people are so kind, funny and welcoming. What could be better than talking to them. Find out how they live in this country, how they look at the world, whether they are happy with life. <br /><br />
 
                     Saying goodbye to India, I took with me not only memories of laughter, but also a newfound understanding of the beauty of imperfection. I hope to inspire you to embrace the unpredictable and find humor in every step of your travels around the world.
-                    <br />
-                    <span style={{ fontSize: 18 }}>20.05.2023</span>
+                    <div style={{ fontSize: 20, marginTop: 30 }}>20.05.2023</div>
                   </p>
                 </div>
                 <div>
@@ -432,8 +431,7 @@ export default function India() {
                       It was all so funny. I like that not only I laughed, but also the people around me. We brought joy to this world, what could be better than this. I am grateful to every person I met, talked to, laughed with. It is an incredible gift to treat everything with love. The people are so kind, funny and welcoming. What could be better than talking to them. Find out how they live in this country, how they look at the world, whether they are happy with life.<br /><br />
 
                       Saying goodbye to India, I took with me not only memories of laughter, but also a newfound understanding of the beauty of imperfection. I hope to inspire you to embrace the unpredictable and find humor in every step of your travels around the world.
-                      <br />
-                      <span style={{ fontSize: 18 }}>20.05.2023</span>
+                      <div style={{ fontSize: 20, marginTop: 30 }}>20.05.2023</div>
                     </p>
                     
                   </div>
