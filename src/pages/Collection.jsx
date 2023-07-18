@@ -159,8 +159,8 @@ export default function Collection() {
                       ></img>{' '}
                       shop
                     </span>
-                    <br />
-                    <div>
+
+                    <div style={{marginTop: -10}}>
                       <p>
                         You can choose here any photos you like and buy them to use in your projects.
                       </p>

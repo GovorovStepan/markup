@@ -43,7 +43,7 @@ export default function Moment() {
     const loadData = async () => {
 
       // Wait for two second
-      await new Promise((r) => setTimeout(r, 10));
+      await new Promise((r) => setTimeout(r, 1000));
       console.log('dsss', loading)
 
       // Toggle loading state
