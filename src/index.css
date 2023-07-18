@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans&family=Sorts+Mill+Goudy&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@500&display=swap');
 
 body {
   margin: 0;
@@ -24,6 +25,7 @@ a {
   padding: 14px 42px;
   background: #ffffff;
   border: 2px solid #000000;
+  font-weight: 500;
 }
 
 #root {
@@ -90,7 +92,7 @@ img {
 .btn-primary:hover {
   color: white;
   background: black;
-  border: 1px solid white;
+  border: 2px solid white;
 }
 
 @media only screen and (max-width: 900px) {
