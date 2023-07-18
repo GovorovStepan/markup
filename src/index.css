@@ -31,6 +31,7 @@ a {
 #root {
   display: flex;
   justify-content: center;
+  scroll-behavior: smooth;
 }
 
 img {
@@ -93,6 +94,10 @@ img {
   color: white;
   background: black;
   border: 2px solid white;
+}
+
+.btn-primary a:hover {
+  color: white;
 }
 
 @media only screen and (max-width: 900px) {

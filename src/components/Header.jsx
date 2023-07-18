@@ -64,6 +64,7 @@ export default function Header({ position }) {
               </NavLink>
               <Link
                 to='/#contacts'
+                // smooth = 'true'
                 className={({ isActive, isPending }) =>
                   isPending ? 'pending' : isActive ? 'active' : ''
                 }

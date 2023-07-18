@@ -6,6 +6,7 @@ import { AppContext } from '../context/AppContext';
 import { useNavigate } from 'react-router-dom'
 import { useMediaQuery } from 'react-responsive';
 import { MutatingDots } from 'react-loader-spinner'
+import { HashLink as Link } from 'react-router-hash-link';
 
 
 export default function Main() {
@@ -106,7 +107,7 @@ export default function Main() {
                   <br /> remain indifferent
                 </p>
               </div>
-              <button className='btn-primary'>Learn more</button>
+              <button className='btn-primary'><Link to='/#collection' smooth = 'true' >Learn more</Link></button>
             </article>
             <img
               alt='background'
@@ -121,8 +122,8 @@ export default function Main() {
               fontStyle: "normal", lineHeight: "normal",
               fontWeight: 400,
               paddingLeft: 30,
-              paddingTop: 30,
-              marginBottom: 35
+              paddingTop: 12,
+              marginBottom: 50
             }}>
               <p>
                 I am a photographer and  traveler who is passionate
@@ -224,7 +225,7 @@ export default function Main() {
               </article>
             </div>
           </div>
-          <div>
+          <div id="collection">
             <div className='slide_header_sm border-bottom'> Collection </div>
             <div style={{
               marginLeft: 20, marginRight: 12, marginTop: 15, marginBottom: 15, fontFamily: "Open Sans", fontSize: "16px",
@@ -446,7 +447,7 @@ export default function Main() {
                     <br /> remain indifferent
                   </p>
                 </div>
-                <button className='btn-primary'>Application</button>
+                <button className='btn-primary'><Link to='/#collection' smooth = 'true' >Learn more</Link></button>
               </article>
               <img
                 alt='background'
@@ -563,7 +564,7 @@ export default function Main() {
                 </p>
               </article>
             </div>
-            <div>
+            <div id="collection">
               <div className='slide_header_mid border-bottom'> Collection </div>
               <div style={{
                 marginLeft: 25, marginRight: 25, marginTop: 30, marginBottom: 30, fontFamily: "Open Sans", fontSize: "26px",
@@ -799,7 +800,7 @@ export default function Main() {
                     <br /> remain indifferent
                   </p>
                 </div>
-                <button className='btn-primary'>Application</button>
+                <button className='btn-primary'><Link to='/#collection' smooth = 'true' >Learn more</Link></button>
               </article>
             </div>
             <div className='second_slide slide border-top'>

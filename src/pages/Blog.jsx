@@ -57,9 +57,10 @@ export default function Blog() {
   return (
     <div
       className='blog'
-      style={{ maxWidth: 1920 }}
+      style={{ maxWidth: 1920, width: '100%' }}
     >
       <Header position='right'></Header>
+      <div>
       <div id="content">
         <div className='header_slide  slide_content'>
           {!isTablet ?
@@ -245,6 +246,7 @@ export default function Blog() {
             </span>
           </div>
         </BlogSlide>
+      </div>
       </div>
       <Header position='left'></Header>
     </div>
