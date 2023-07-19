@@ -107,7 +107,7 @@ export default function Main() {
                   <br /> remain indifferent
                 </p>
               </div>
-              <button className='btn-primary'><Link to='/#collection' smooth='true' >Learn more</Link></button>
+              <Link to='/#collection' smooth='true' ><button className='btn-primary'>Learn more</button></Link>
             </article>
             <img
               alt='background'
@@ -447,7 +447,7 @@ export default function Main() {
                     <br /> remain indifferent
                   </p>
                 </div>
-                <button className='btn-primary'><Link to='/#collection' smooth='true' >Learn more</Link></button>
+                <Link to='/#collection' smooth='true' ><button className='btn-primary'>Learn more</button></Link>
               </article>
               <img
                 alt='background'
@@ -829,7 +829,7 @@ export default function Main() {
                     <br /> remain indifferent
                   </p>
                 </div>
-                <button className='btn-primary'><Link to='/#collection' smooth='true' >Learn more</Link></button>
+                <Link to='/#collection' smooth='true' ><button className='btn-primary'>Learn more</button></Link>
               </article>
             </div>
             <div className='second_slide slide border-top'>
