@@ -381,7 +381,7 @@ export default function Main() {
                 <p style={{ margin: 0, marginBottom: 24 }}>
                   <div style={{ fontSize: "12px", marginBottom: 10 }}>email</div>
                   <div style={{ fontSize: "24px" }}>
-                    <a href='mailto:photobuy@gmail.com'>photobuy@gmail.com</a>
+                    <a href='mailto:photosave@gmail.com'>photosave@gmail.com</a>
                   </div>
                 </p>
                 <p>
@@ -759,7 +759,7 @@ export default function Main() {
                     <span style={{ fontSize: "16px" }}>email</span>
                     <br />
                     <span style={{ fontSize: "36px" }}>
-                      <a href='mailto:photobuy@gmail.com'>photobuy@gmail.com</a>
+                      <a href='mailto:photosave@gmail.com'>photosave@gmail.com</a>
                     </span>
                   </p>
                   <p>
@@ -856,8 +856,7 @@ export default function Main() {
                         <br />
                         <br /> I have compiled a collection of
                         <br /> my favorite photographs from
-                        <br /> my travels, which can be found <br />
-                        on this site.
+                        <br /> my travels, which can be found on this site.
                       </p>
                     </article>
                     <div style={{ maxWidth: 612 }}>
@@ -865,6 +864,7 @@ export default function Main() {
                         alt='background'
                         src='./img/main/main_second_slide_img_1.png'
                         className='main_second_slide_img border-left'
+                        style={{  borderBottom: '1px solid black'}}
                       ></img>
                     </div>
                   </div>
@@ -968,7 +968,7 @@ export default function Main() {
                   <div
                     className='border-left border-right'
                     style={{
-                      maxWidth: 384,
+                      maxWidth: 385,
                     }}
                   >
                     <img
@@ -983,7 +983,7 @@ export default function Main() {
             <div id="collection" className='fifth_slide slide border-top flex-direction-column'>
               <div
                 className='slide_header border-bottom text-align-center'
-                style={{ width: '100%' }}
+                style={{ width: '100%',   marginTop: '0.3rem' }}
               >
                 Collection
               </div>
@@ -993,7 +993,7 @@ export default function Main() {
                     className='border-bottom'
                     id='collection_action_text'
                   >
-                    You can buy my photos and use them in your project
+                    You can save my photos and use them in your project
                   </div>
                   <div
                     className='d-flex'
@@ -1002,15 +1002,16 @@ export default function Main() {
                     <div style={{  maxWidth: 175, width: '100%'}}></div>
                     <div
                       id='collection_all'
-                      className='border-left border-right'
-                      style={{ width: 370, backgroundSize: "100% 100%" }}
+                      className='border-left border-right hov'
+                      style={{ width: 370, backgroundSize: "100% 103%" }}
                       onClick={() => changeFilter('all')}
                     >
                       <span>All</span>
                     </div>
                     <div
                       id='collection_view'
-                      style={{ width: 500, backgroundSize: "100% 100%" }}
+                      className='hov'
+                      style={{ width: 500, backgroundSize: "103% 100%" }}
                       onClick={() => changeFilter('landscapes')}
                     >
                       <span>Landscapes</span>
@@ -1021,15 +1022,16 @@ export default function Main() {
                   <div>
                     <div
                       id='collection_animal'
-                      style={{ width: 700, height: 568 }}
+                      className='hov'
+                      style={{ width: 700, height: 568, backgroundSize: "100% 100%",   alignItems:'center' }}
                       onClick={() => changeFilter('animal')}
                     >
                       <span>Animals</span>
                     </div>
                     <div
                       id='collection_texture'
-                      className='border-top'
-                      style={{ width: 700, height: 317 }}
+                      className='border-top hov'
+                      style={{ width: 700, height: 317, backgroundSize: "103% 100%" }}
                       onClick={() => changeFilter('texture')}
                     >
                       {' '}
@@ -1229,7 +1231,7 @@ export default function Main() {
                       <span>email</span>
                       <br />
                       <span>
-                        <a href='mailto:photobuy@gmail.com'>photobuy@gmail.com</a>
+                        <a href='mailto:photosave@gmail.com'>photosave@gmail.com</a>
                       </span>
                     </p>
                   </div>
