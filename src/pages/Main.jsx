@@ -343,29 +343,33 @@ export default function Main() {
               className='d-flex justify-content-space-around'
             >
               <BlogCard
+                link = 'india'
                 header='Adventure in India'
                 img='main_1.png'
                 text="Sometimes it's important to just relax not to think about what others think and do what you want."
               />
               <BlogCard
                 img='main_2.png'
+                link = 'penguin'
                 header='Friend penguin'
                 text='Animals love to have fun too. Let me prove it to you.'
               />
               <BlogCard
                 img='main_3.png'
+                link = 'life'
                 header='Happiest is laughter'
                 text='Laughter will always help to get out of any situation. A sense of humor is definitely the most important thing in our life.'
               />
               <BlogCard
                 img='main_4.png'
+                link = 'moment'
                 header='Unexpected moments'
                 text='You can’t even guess how one white lady took and changed my day 180 degrees.'
               />
             </div>
-            <div style={{ textAlign: "center" }}>
+            {/* <div style={{ textAlign: "center" }}>
               <button className='btn-primary' onClick={() => { moveTo('/blog') }}> Show more</button>
-            </div>
+            </div> */}
 
           </div>
           <div id="contacts">
@@ -447,7 +451,7 @@ export default function Main() {
                     <br /> remain indifferent
                   </p>
                 </div>
-                <Link to='/#collection' smooth='true' ><button className='btn-primary'>Learn more</button></Link>
+                <button className='btn-primary'><Link to='/#collection' smooth='true' >Learn more</Link></button>
               </article>
               <img
                 alt='background'
@@ -716,6 +720,7 @@ export default function Main() {
               >
                 <BlogCard
                  size='mid'
+                 link = 'india'
                   header='Adventure in India'
                   img='main_1.png'
                   text="Sometimes it's important to just relax not to think about what others think and do what you want."
@@ -723,25 +728,28 @@ export default function Main() {
                 <BlogCard
                  size='mid'
                   img='main_2.png'
+                  link = 'penguin'
                   header='Friend penguin'
                   text='Animals love to have fun too. Let me prove it to you.'
                 />
                 <BlogCard
                  size='mid'
                   img='main_3.png'
+                  link = 'life'
                   header='Happiest is laughter'
                   text='Laughter will always help to get out of any situation. A sense of humor is definitely the most important thing in our life.'
                 />
                 <BlogCard
                   size='mid'
                   img='main_4.png'
+                  link = 'moment'
                   header='Unexpected moments'
                   text='You can’t even guess how one white lady took and changed my day 180 degrees.'
                 />
               </div>
-              <div style={{ textAlign: "center" }}>
+              {/* <div style={{ textAlign: "center" }}>
                 <button className='btn-primary' onClick={() => { moveTo('/blog') }}> Show more</button>
-              </div>
+              </div> */}
             </div>
             <div id="contacts">
               <div className='slide_header_mid border-bottom'  >Contacts</div>
@@ -1190,29 +1198,33 @@ export default function Main() {
                 style={{ gap: 30, justifyContent: "center" }}
               >
                 <BlogCard
+                link = 'india'
                   header='Adventure in India'
                   img='main_1.png'
                   text="Sometimes it's important to just relax not to think about what others think and do what you want."
                 />
                 <BlogCard
+                link = 'penguin'
                   img='main_2.png'
                   header='Friend penguin'
                   text='Animals love to have fun too. Let me prove it to you.'
                 />
                 <BlogCard
                   img='main_3.png'
+                  link = 'life'
                   header='Happiest is laughter'
                   text='Laughter will always help to get out of any situation. A sense of humor is definitely the most important thing in our life.'
                 />
                 <BlogCard
                   img='main_4.png'
+                  link = 'moment'
                   header='Unexpected moments'
                   text='You can’t even guess how one white lady took and changed my day 180 degrees.'
                 />
               </div>
-              <div className='text-align-center'>
+              {/* <div className='text-align-center'>
                 <button className='btn-primary' onClick={() => { moveTo('/blog') }}> Show more</button>
-              </div>
+              </div> */}
             </div>
             <div className='tenth_slide border-top' id="contacts">
               <div className='slide_header border-bottom'>Contacts</div>

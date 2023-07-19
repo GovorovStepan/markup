@@ -1,4 +1,5 @@
 import { useMediaQuery } from 'react-responsive';
+import { HashLink as Link } from 'react-router-hash-link';
 const styles = {
   container: {
     border: '2px solid #000000',
@@ -30,7 +31,7 @@ const styles = {
 };
 
 
-export default function BlogCard({ header, img, text, size = "normal" }) {
+export default function BlogCard({ header, img, text, link,  size = "normal" }) {
 
   const isTablet = useMediaQuery({ query: '(max-width: 934px)' });
   const isMobile = useMediaQuery({ query: '(max-width: 600px)' });
@@ -74,6 +75,9 @@ export default function BlogCard({ header, img, text, size = "normal" }) {
           <header style={styles.header}>{header}</header>
           <p style={styles.text}>{text}</p>
         </article>
+      </div>
+      <div className='d-flex' style={{  width: '100%', height: '100%', justifyContent: 'flex-end', alignItems: 'flex-end'}}>
+        <button className='btn-primary' style={{marginRight:20, marginBottom: 20}}><Link to={'/blog/'+link} smooth='true' >More</Link></button>
       </div>
     </div>
   );
