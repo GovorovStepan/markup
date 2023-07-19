@@ -988,7 +988,7 @@ export default function Main() {
                 Collection
               </div>
               <div className='d-flex'>
-                <div className='d-flex flex-direction-column'>
+                <div className='d-flex flex-direction-column' style={{width:'100%'}}>
                   <div
                     className='border-bottom'
                     id='collection_action_text'
@@ -999,25 +999,25 @@ export default function Main() {
                     className='d-flex'
                     style={{ height: 805 }}
                   >
-                    <div></div>
+                    <div style={{  maxWidth: 175, width: '100%'}}></div>
                     <div
                       id='collection_all'
                       className='border-left border-right'
-                      style={{ width: 370 }}
+                      style={{ width: 370, backgroundSize: "100% 100%" }}
                       onClick={() => changeFilter('all')}
                     >
                       <span>All</span>
                     </div>
                     <div
                       id='collection_view'
-                      style={{ width: 500 }}
+                      style={{ width: 500, backgroundSize: "100% 100%" }}
                       onClick={() => changeFilter('landscapes')}
                     >
                       <span>Landscapes</span>
                     </div>
                   </div>
                 </div>
-                <div className='border-left d-flex'>
+                <div className='border-left d-flex' style={{justifyContent: 'flex-end'}}>
                   <div>
                     <div
                       id='collection_animal'
