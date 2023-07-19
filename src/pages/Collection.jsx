@@ -45,7 +45,7 @@ export default function Collection() {
       style={{ maxWidth: isMobile ? 600 : isTablet ? 934 : 1920, width: "100%" }}
     >
       <Header position='right'></Header>
-      <div id='content'>
+      <div id='content' className='border-bottom' style={{paddingBottom: 120}}>
         <div>
           {!isTablet ?
             <div className='header_slide d-flex'>
@@ -77,12 +77,12 @@ export default function Collection() {
                       src='./img/collection/header_text_2.png'
                       className='text_img'
                     ></img>{' '}
-                    shop
+                    gallery
                   </span>
                   <br />
                   <div>
                     <p>
-                      You can choose here any photos you like and buy them to use in your projects.
+                      You can choose here any photos you like and save them to use in your projects.
                     </p>
                   </div>
                 </article>
@@ -126,12 +126,12 @@ export default function Collection() {
                         src='./img/collection/header_text_2.png'
                         className='text_img'
                       ></img>{' '}
-                      shop
+                      gallery
                     </span>
                     <br />
                     <div>
                       <p>
-                        You can choose here any photos you like and buy them to use in your projects.
+                        You can choose here any photos you like and save them to use in your projects.
                       </p>
                     </div>
                   </article>
@@ -157,12 +157,12 @@ export default function Collection() {
                         src='./img/collection/header_text_2.png'
                         className='text_img'
                       ></img>{' '}
-                      shop
+                      gallery
                     </span>
 
                     <div style={{marginTop: -10}}>
                       <p>
-                        You can choose here any photos you like and buy them to use in your projects.
+                        You can choose here any photos you like and save them to use in your projects.
                       </p>
                     </div>
                   </article>
