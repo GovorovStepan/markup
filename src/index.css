@@ -96,7 +96,7 @@ img {
   border: 2px solid white;
 }
 
-.btn-primary a:hover {
+.btn-primary:hover a {
   color: white;
 }
 
