@@ -1160,7 +1160,7 @@ export default function Main() {
                         top: -394
                       }} alt='dot' src='./img/main/dot.svg' className='dot'></img>
                       <div>
-                        <button className='btn-primary' onClick={() => { moveTo('/collection') }}> See photo</button>
+                        <button className='btn-primary' onClick={() => { moveTo('/collection') }} style={{marginBottom: 100, marginLeft: 165}}> See photo</button>
                       </div>
                     </div>
                     <div
