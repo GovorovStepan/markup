@@ -14,6 +14,7 @@ const styles = {
     fontSize: 24,
     lineHeight: '33px',
     maxWidth: 500,
+    marginTop: -2,   marginBottom: 40
   },
 };
 
