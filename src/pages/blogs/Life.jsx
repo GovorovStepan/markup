@@ -253,7 +253,7 @@ export default function Life() {
                   </article>
                   <div
                     style={styles.bottom_img}
-                    className='main_img border-top border-bottom'
+                    className='main_img border-top'
                   ></div>
                 </div>
                 <div
@@ -264,9 +264,9 @@ export default function Life() {
                   display: "flex"
                 }}>
                   <div><img style={{ maxWidth: 267, height: "100%" }} src={`../img/blog/life/1_mid.png`} className='border-right'></img></div>
-                  <div><p style={{
+                  <div style={{marginBottom: 47}}><p style={{
                     maxWidth: 448,
-                    marginTop: 50,
+                    marginTop: 75,
                     marginRight: 60,
                     marginLeft: 60,
                     lineHeight: "normal",

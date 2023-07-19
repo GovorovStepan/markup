@@ -130,7 +130,7 @@ export default function Collection() {
                     </span>
                     <br />
                     <div>
-                      <p>
+                    <p style={{marginTop: 0,   marginBottom: 40}}>
                         You can choose here any photos you like and save them to use in your projects.
                       </p>
                     </div>

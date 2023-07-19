@@ -44,7 +44,7 @@ export default function BlogCard({ header, img, text, link,  size = "normal" }) 
       }
       styles.img_wrapper =  {
         padding: '20px',
-        maxWidth: 300,
+        // maxWidth: 300,
       }
       break;
   
@@ -77,7 +77,7 @@ export default function BlogCard({ header, img, text, link,  size = "normal" }) 
         </article>
       </div>
       <div className='d-flex' style={{  width: '100%', height: '100%', justifyContent: 'flex-end', alignItems: 'flex-end'}}>
-        <Link to={'/blog/'+link} smooth='true' ><button className='btn-primary' style={{marginRight:20, marginBottom: 20}}>More</button></Link>
+        <Link to={'/blog/'+link} smooth='true' ><button className='btn-primary' style={{ marginBottom: 20, marginRight: 20}}>More</button></Link>
       </div>
     </div>
   );

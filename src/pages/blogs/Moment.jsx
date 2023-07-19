@@ -267,6 +267,7 @@ export default function Moment() {
                   <div><p style={{
                     maxWidth: 448,
                     marginTop: 75,
+                    marginBottom: 75,
                     marginRight: 60,
                     marginLeft: 60,
                     lineHeight: "normal",
@@ -310,7 +311,7 @@ export default function Moment() {
 
 
                   </p></div>
-                  <div><img style={{ maxWidth: 267, height: "100%" }} src={`../img/blog/moment/4_mid.png`} className='border-righ'></img></div>
+                  <div><img style={{ maxWidth: 267, height: "100%" }} src={`../img/blog/moment/4_mid.png`} className='border-left'></img></div>
                 </div>
                 <div
                   className='border-bottom'

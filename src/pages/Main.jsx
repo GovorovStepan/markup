@@ -445,17 +445,18 @@ export default function Main() {
                   </p>
                 </div>
                 <div>
-                  <p>
+                  <p style={{marginTop: -25,   marginBottom: 40}}>
                     I create photos that touch your soul,
                     <br /> looking at them you will not be able to
                     <br /> remain indifferent
                   </p>
                 </div>
-                <button className='btn-primary'><Link to='/#collection' smooth='true' >Learn more</Link></button>
+                <Link to='/#collection' smooth='true' > <button className='btn-primary'>Learn more</button></Link>
               </article>
               <img
                 alt='background'
                 src='./img/main/mid/1.png'
+                className='border-top'
               ></img>
             </div>
             <div>
@@ -465,7 +466,7 @@ export default function Main() {
                 fontStyle: "normal", lineHeight: "normal",
                 fontWeight: 400,
                 paddingLeft: 100,
-                paddingTop: 75,
+                paddingTop: 45,
                 marginBottom: 75
               }}>
                 <p>
@@ -489,7 +490,7 @@ export default function Main() {
                 <img
                   alt='background'
                   src='./img/main/mid/2.png'
-                  className='border-bottom'
+                  className='border-bottom border-top'
                 ></img>
               </div>
             </div>
@@ -548,7 +549,7 @@ export default function Main() {
               <article style={{
                 paddingLeft: 80,
                 paddingRight: 80,
-                paddingTop: 75,
+                paddingTop: 45,
                 marginBottom: 75,
                 maxWidth: 635,
                 fontFamily: "Open Sans", fontSize: "30px",
@@ -574,7 +575,7 @@ export default function Main() {
                 marginLeft: 25, marginRight: 25, marginTop: 30, marginBottom: 30, fontFamily: "Open Sans", fontSize: "26px",
                 fontStyle: "normal", lineHeight: "normal",
                 fontWeight: 400,
-              }} > You can download my photos and use them in your project</div>
+              }} > You can save my photos and use them in your project</div>
               <div>
                 <div className="border-top" style={{ display: "flex", justifyContent: "center" }} onClick={() => changeFilter('all')}><span style={{
                   padding: "75px 0", fontFamily: "Open Sans", fontSize: "40px",
@@ -629,6 +630,7 @@ export default function Main() {
                 <img
                   alt='background'
                   src='./img/main/mid/8.png'
+                  className='border-top border-bottom'
                   style={{ height: '100%' }}
                 ></img>
               </div>
@@ -702,7 +704,7 @@ export default function Main() {
                 <img
                   alt='background'
                   src='./img/main/mid/6.png'
-                  className='border-bottom'
+                  className='border-bottom border-top'
                   style={{ height: '100%' }}
                 ></img>
               </div>
@@ -714,7 +716,8 @@ export default function Main() {
                 style={{
                   flexWrap: "wrap", paddingRight: 20,
                   paddingLeft: 20,
-                  gap: 20
+                  gap: 20,
+                  paddingBottom: 100
                 }}
                 className='d-flex justify-content-space-around'
               >
@@ -796,6 +799,7 @@ export default function Main() {
               <img
                 alt='background '
                 src='./img/main/mid/7.png'
+                className='border-top border-bottom'
               ></img>
             </div>
           </div> : <div>

@@ -134,7 +134,7 @@ export default function Blog() {
             ></div> :
               <img
                 alt='background'
-                src='./img/blog/header_back.png'
+                src='./img/blog/header_mid.png'
                 className='border-bottom border-top'
               ></img>}
           </div>
@@ -177,7 +177,7 @@ export default function Blog() {
               <img
                 alt='background'
                 src='./img/blog/penguin_small_1.png'
-                className='text_img'
+                className='text_img border-top'
               ></img>{' '}
               <br />
               friends with one
