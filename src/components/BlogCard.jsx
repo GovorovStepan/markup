@@ -77,7 +77,7 @@ export default function BlogCard({ header, img, text, link,  size = "normal" }) 
         </article>
       </div>
       <div className='d-flex' style={{  width: '100%', height: '100%', justifyContent: 'flex-end', alignItems: 'flex-end'}}>
-        <button className='btn-primary' style={{marginRight:20, marginBottom: 20}}><Link to={'/blog/'+link} smooth='true' >More</Link></button>
+        <Link to={'/blog/'+link} smooth='true' ><button className='btn-primary' style={{marginRight:20, marginBottom: 20}}>More</button></Link>
       </div>
     </div>
   );
