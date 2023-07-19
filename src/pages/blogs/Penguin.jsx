@@ -14,7 +14,7 @@ const styles = {
     fontWeight: 400,
     fontSize: 24,
     lineHeight: '33px',
-    maxWidth: 500,
+    maxWidth: 500, marginTop: 6, marginBottom: 40
   },
   text_big: {
     fontFamily: 'Sorts Mill Goudy',
@@ -78,7 +78,7 @@ export default function Penguin() {
       fontSize: "18px",
       lineHeight: '25px',
       maxWidth: 330,
-      marginTop: 4,   marginBottom: 30
+      marginTop: 4, marginBottom: 30
     }
     styles.slider_header = {
       height: 50,
@@ -396,7 +396,7 @@ export default function Penguin() {
                 <div style={{ maxWidth: 861 }}><p style={{
                   paddingRight: 90,
                   paddingLeft: 70,
-                  paddingTop: 75,
+                  paddingTop: 72,
                   lineHeight: "normal",
                   fontSize: 28
 

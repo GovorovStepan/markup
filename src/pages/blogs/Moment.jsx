@@ -13,7 +13,7 @@ const styles = {
     fontWeight: 400,
     fontSize: 24,
     lineHeight: '33px',
-    maxWidth: 500,
+    maxWidth: 500, marginTop: 6, marginBottom: 40
   },
   text_big: {
     fontFamily: 'Sorts Mill Goudy',
@@ -77,7 +77,7 @@ export default function Moment() {
       fontSize: "18px",
       lineHeight: '25px',
       maxWidth: 330,
-      marginTop: 4,   marginBottom: 30
+      marginTop: 4, marginBottom: 30
     }
     styles.slider_header = {
       height: 50,
@@ -327,7 +327,7 @@ export default function Moment() {
                     fontSize: 28
                   }}>
                     Saying goodbye to Italy, I took with me not only the memories of breathtaking landscapes and rich history, but also the laughter and joy that I shared with people from all walks of life. I hope my unintentional comedy adventures will remind everyone that laughter knows no language or boundaries.
-                    
+
                     <div style={{ fontSize: 20, marginTop: 30 }}>20.05.2023</div>
                   </p>
                 </div>
@@ -419,7 +419,7 @@ export default function Moment() {
                 <div><p style={{
                   paddingRight: 100,
                   paddingLeft: 175,
-                  paddingTop: 100,
+                  paddingTop: 72,
                   width: 1170,
                   fontSize: 28,
                   lineHeight: "normal"

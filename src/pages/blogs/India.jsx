@@ -15,6 +15,7 @@ const styles = {
     fontSize: 24,
     lineHeight: '33px',
     maxWidth: 500,
+    marginTop: 6, marginBottom: 40
   },
   text_big: {
     fontFamily: 'Sorts Mill Goudy',
@@ -81,7 +82,7 @@ export default function India() {
       fontSize: "18px",
       lineHeight: '25px',
       maxWidth: 330,
-      marginTop: 4,   marginBottom: 30
+      marginTop: 4, marginBottom: 30
     }
     styles.slider_header = {
       height: 50,
@@ -382,7 +383,7 @@ export default function India() {
                 <div style={{ maxWidth: 861 }}><p style={{
                   paddingRight: 90,
                   paddingLeft: 70,
-                  paddingTop: 100,
+                  paddingTop: 72,
                   lineHeight: "normal",
                   fontSize: 28
 
@@ -433,7 +434,7 @@ export default function India() {
                       Saying goodbye to India, I took with me not only memories of laughter, but also a newfound understanding of the beauty of imperfection. I hope to inspire you to embrace the unpredictable and find humor in every step of your travels around the world.
                       <div style={{ fontSize: 20, marginTop: 30 }}>20.05.2023</div>
                     </p>
-                    
+
                   </div>
                 </div>
 

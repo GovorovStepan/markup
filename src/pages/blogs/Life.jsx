@@ -13,7 +13,7 @@ const styles = {
     fontWeight: 400,
     fontSize: 24,
     lineHeight: '33px',
-    maxWidth: 500,
+    maxWidth: 500, marginTop: 6, marginBottom: 40
   },
   text_big: {
     fontFamily: 'Sorts Mill Goudy',
@@ -77,7 +77,7 @@ export default function Life() {
       fontSize: "18px",
       lineHeight: '25px',
       maxWidth: 330,
-      marginTop: 4,   marginBottom: 30
+      marginTop: 4, marginBottom: 30
     }
     styles.slider_header = {
       height: 50,
@@ -441,7 +441,7 @@ export default function Life() {
                   <div>
                     <p style={{
                       paddingLeft: 132,
-                      paddingTop: 100,
+                      paddingTop: 72,
                       lineHeight: "normal",
                       width: 700,
                       fontSize: 28
