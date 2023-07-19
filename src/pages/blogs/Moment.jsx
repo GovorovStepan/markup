@@ -410,7 +410,7 @@ export default function Moment() {
                 className='border-bottom'
                 style={{ height: 100 }}
               ></div>
-              <div style={{ maxHeight: 803 }} ><img style={{ height: "100%" }} src={`../img/blog/moment/3.png`} className='border-bottm'></img></div>
+              <div style={{ maxHeight: 803 }} ><img style={{ height: "100%" }} src={`../img/blog/moment/3.png`} className='border-bottom'></img></div>
               <div
                 className='border-bottom'
                 style={{ height: 100 }}
