@@ -1248,6 +1248,7 @@ export default function Main() {
               <img
                 alt='background '
                 src='./img/main/main_bottom_slide.png'
+                className=' border-bottom'
               ></img>
             </div>
           </div>}
