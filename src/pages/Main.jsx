@@ -16,7 +16,7 @@ export default function Main() {
 
 
   // Set loading state to true initially
-  const [loading, setLoading] = useState(false);
+  const [loading, setLoading] = useState(true);
   const [isShowCard, setShowcard] = useState('none');
   const [maplink, setMaplink] = useState('italy');
   const [mapheader, setMapheader] = useState('Italy');
@@ -28,10 +28,10 @@ export default function Main() {
     const loadData = async () => {
 
       // Wait for two second
-      // await new Promise((r) => setTimeout(r, 2000));
+      await new Promise((r) => setTimeout(r, 2000));
 
       // Toggle loading state
-      // setLoading(!loading);
+      setLoading(!loading);
     };
 
     loadData();
