@@ -32,6 +32,7 @@ export default function Header({ position }) {
       return (
         <div style={{
           position: "fixed",
+          zIndex: 100000,
           width: "100%",
           padding: 10,
           borderBottom: "2px solid black",

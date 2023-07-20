@@ -16,7 +16,11 @@ export default function Main() {
 
 
   // Set loading state to true initially
-  const [loading, setLoading] = useState(true);
+  const [loading, setLoading] = useState(false);
+  const [isShowCard, setShowcard] = useState('none');
+  const [maplink, setMaplink] = useState('italy');
+  const [mapheader, setMapheader] = useState('Italy');
+  const [maptext, setMaptext] = useState("I'm definitely Italian at heart, I can eat pasta all day and night. And at the same time drink wine and look at the multi-level buildings.");
 
   useEffect(() => {
     // Loading function to load data or
@@ -24,15 +28,46 @@ export default function Main() {
     const loadData = async () => {
 
       // Wait for two second
-      await new Promise((r) => setTimeout(r, 2000));
-      console.log('dsss', loading)
+      // await new Promise((r) => setTimeout(r, 2000));
 
       // Toggle loading state
-      setLoading(!loading);
+      // setLoading(!loading);
     };
 
     loadData();
   }, [])
+
+  const showCard = (country) => {
+    setShowcard('block')
+    switch (country) {
+      case 'italy':
+        setMaplink('italy')
+        setMaptext("I'm definitely Italian at heart, I can eat pasta all day and night. And at the same time drink wine and look at the multi-level buildings.")
+        setMapheader('Italy')
+        break;
+      case 'india':
+        setMaplink('india')
+        setMaptext('India is a land of contrasts. The population is very poor. However, rich nature and culture. I recommend trying all its sides in order to form an accurate opinion.')
+        setMapheader('India')
+        break;
+      case 'argentina':
+        setMaplink('argentina')
+        setMapheader('Argentina')
+        setMaptext('This country is full of its diversity. The weather is sunny and warm. The people are kind and welcoming. Nature never ceases to amaze.')
+        break;
+      case 'indonesia':
+        setMaplink('indonesia')
+        setMapheader('Indonesia')
+        setMaptext("Indonesia is something you won't see anywhere else. I was in Bali. The locals believe in spirits, they have many temples and make offerings every day.")
+        break;
+      case 'mongolia':
+        setMaplink('mongolia')
+        setMapheader('Mongolia')
+        setMaptext('There is such space in Mongolia, the soul sings. I can spend hours watching horses running through the fields with mountains in the background.')
+        break;
+
+    }
+  }
 
   const { dispatch } = useContext(AppContext);
   const navigate = useNavigate();
@@ -65,6 +100,12 @@ export default function Main() {
       wrapperClass=""
       visible={true} />)
   }
+
+  document.addEventListener( 'click', (e) => {
+    if ( e.composedPath()[0].className != 'dot' ) {
+      setShowcard('none'); // скрываем элемент т к клик был за его пределами
+    }
+  })
 
   return (
     <div
@@ -343,26 +384,26 @@ export default function Main() {
               className='d-flex justify-content-space-around'
             >
               <BlogCard
-                link = 'india'
+                link='india'
                 header='Adventure in India'
                 img='main_1.png'
                 text="Sometimes it's important to just relax not to think about what others think and do what you want."
               />
               <BlogCard
                 img='main_2.png'
-                link = 'penguin'
+                link='penguin'
                 header='Friend penguin'
                 text='Animals love to have fun too. Let me prove it to you.'
               />
               <BlogCard
                 img='main_3.png'
-                link = 'life'
+                link='life'
                 header='Happiest is laughter'
                 text='Laughter will always help to get out of any situation. A sense of humor is definitely the most important thing in our life.'
               />
               <BlogCard
                 img='main_4.png'
-                link = 'moment'
+                link='moment'
                 header='Unexpected moments'
                 text='You can’t even guess how one white lady took and changed my day 180 degrees.'
               />
@@ -445,7 +486,7 @@ export default function Main() {
                   </p>
                 </div>
                 <div>
-                  <p style={{marginTop: -25,   marginBottom: 40}}>
+                  <p style={{ marginTop: -25, marginBottom: 40 }}>
                     I create photos that touch your soul,
                     <br /> looking at them you will not be able to
                     <br /> remain indifferent
@@ -661,37 +702,64 @@ export default function Main() {
                 fontWeight: 400,
               }}>Click on the circle and see how many places I've been</div>
               <div className='d-flex'>
-                <div className='d-flex align-items-center flex-direction-column' style={{ padding: "20px 20px" }}>
+                <div className='d-flex align-items-center flex-direction-column' style={{ padding: "20px 20px", position: 'relative' }}>
                   <img
                     alt='background'
                     id='map'
-                    style={{ padding: 0, paddingTop: 20, paddingBottom: 40 }}
+                    style={{ padding: 0, paddingTop: 20, paddingBottom: 40, position: 'relative', zIndex: -1 }}
                     src='./img/main/mid/5.png'
                   ></img>
-                  <img alt='dot' style={{
+                  <div id="mapCard" style={{ position: 'absolute', display: isShowCard, top: 50, border: "2px solid black", zIndex: 1, background: 'white' }}>
+                    <div style={{ padding: 20 }}>
+                      <img alt="background" src={'./img/main/' + maplink + '.png'}></img>
+                    </div>
+                    <div style={{ padding: '0 20px 20px 20px', }}>
+                      <article style={{ padding: 0, maxWidth: 455 }}>
+                        <header style={{
+                          fontFamily: 'Open Sans',
+                          fontStyle: 'normal',
+                          fontWeight: 400,
+                          fontSize: 28,
+                          lineHeight: '44px',
+                        }}>{mapheader}</header>
+                        <p style={{
+                          fontFamily: 'Open Sans',
+                          fontStyle: 'normal',
+                          fontWeight: 400,
+                          fontSize: 16,
+                          lineHeight: '22px',
+                          marginTop: 9,
+                          marginBottom: 0
+                        }}>{maptext}</p>
+                      </article>
+                    </div>
+                  </div>
+                  <img alt='dot'
+                    onClick={() => { showCard('argentina') }}
+                    style={{
+                      left: 195,
+                      top: 357
+                    }} src='./img/main/dot.svg' className='dot'></img>
+                  <img onClick={() => { showCard('italy') }}
+                    style={{
 
-                    left: -160,
-                    top: -130
-                  }} src='./img/main/dot.svg' className='dot'></img>
-                  <img style={{
+                      left: 385,
+                      top: 145
+                    }} alt='dot' src='./img/main/dot.svg' className='dot'></img>
+                  <img onClick={() => { showCard('mongolia') }} style={{
 
-                    right: -10,
-                    top: -330
+                    left: 610,
+                    top: 140
                   }} alt='dot' src='./img/main/dot.svg' className='dot'></img>
-                  <img style={{
+                  <img onClick={() => { showCard('india') }} style={{
 
-                    left: 175,
-                    top: -290
+                    left: 547,
+                    top: 195
                   }} alt='dot' src='./img/main/dot.svg' className='dot'></img>
-                  <img style={{
+                  <img onClick={() => { showCard('indonesia') }} style={{
 
-                    left: 240,
-                    top: -360
-                  }} alt='dot' src='./img/main/dot.svg' className='dot'></img>
-                  <img style={{
-
-                    left: 242,
-                    top: -260
+                    left: 620,
+                    top: 270
                   }} alt='dot' src='./img/main/dot.svg' className='dot'></img>
                   <div>
                     <button className='btn-primary' onClick={() => { moveTo('/collection') }}> See photo</button>
@@ -722,30 +790,30 @@ export default function Main() {
                 className='d-flex justify-content-space-around'
               >
                 <BlogCard
-                 size='mid'
-                 link = 'india'
+                  size='mid'
+                  link='india'
                   header='Adventure in India'
                   img='main_1.png'
                   text="Sometimes it's important to just relax not to think about what others think and do what you want."
                 />
                 <BlogCard
-                 size='mid'
+                  size='mid'
                   img='main_2.png'
-                  link = 'penguin'
+                  link='penguin'
                   header='Friend penguin'
                   text='Animals love to have fun too. Let me prove it to you.'
                 />
                 <BlogCard
-                 size='mid'
+                  size='mid'
                   img='main_3.png'
-                  link = 'life'
+                  link='life'
                   header='Happiest is laughter'
                   text='Laughter will always help to get out of any situation. A sense of humor is definitely the most important thing in our life.'
                 />
                 <BlogCard
                   size='mid'
                   img='main_4.png'
-                  link = 'moment'
+                  link='moment'
                   header='Unexpected moments'
                   text='You can’t even guess how one white lady took and changed my day 180 degrees.'
                 />
@@ -835,7 +903,7 @@ export default function Main() {
                   </p>
                 </div>
                 <div>
-                  <p style={{marginTop: -7,   marginBottom: 40}}>
+                  <p style={{ marginTop: -7, marginBottom: 40 }}>
                     I create photos that touch your soul,
                     <br /> looking at them you will not be able to
                     <br /> remain indifferent
@@ -876,7 +944,7 @@ export default function Main() {
                         alt='background'
                         src='./img/main/main_second_slide_img_1.png'
                         className='main_second_slide_img border-left'
-                        style={{  borderBottom: '1px solid black'}}
+                        style={{ borderBottom: '1px solid black' }}
                       ></img>
                     </div>
                   </div>
@@ -995,12 +1063,12 @@ export default function Main() {
             <div id="collection" className='fifth_slide slide border-top flex-direction-column'>
               <div
                 className='slide_header border-bottom text-align-center'
-                style={{ width: '100%',   marginTop: '0.3rem' }}
+                style={{ width: '100%', marginTop: '0.3rem' }}
               >
                 Collection
               </div>
               <div className='d-flex'>
-                <div className='d-flex flex-direction-column' style={{width:'100%'}}>
+                <div className='d-flex flex-direction-column' style={{ width: '100%' }}>
                   <div
                     className='border-bottom'
                     id='collection_action_text'
@@ -1011,7 +1079,7 @@ export default function Main() {
                     className='d-flex'
                     style={{ height: 805 }}
                   >
-                    <div style={{  maxWidth: 175, width: '100%'}}></div>
+                    <div style={{ maxWidth: 175, width: '100%' }}></div>
                     <div
                       id='collection_all'
                       className='border-left border-right hov'
@@ -1030,12 +1098,12 @@ export default function Main() {
                     </div>
                   </div>
                 </div>
-                <div className='border-left d-flex' style={{justifyContent: 'flex-end'}}>
+                <div className='border-left d-flex' style={{ justifyContent: 'flex-end' }}>
                   <div>
                     <div
                       id='collection_animal'
                       className='hov'
-                      style={{ width: 700, height: 568, backgroundSize: "100% 100%",   alignItems:'center' }}
+                      style={{ width: 700, height: 568, backgroundSize: "100% 100%", alignItems: 'center' }}
                       onClick={() => changeFilter('animal')}
                     >
                       <span>Animals</span>
@@ -1142,39 +1210,64 @@ export default function Main() {
                     <p>Click on the circle and see how many places I've been</p>
                   </div>
                   <div className='d-flex'>
-                    <div className='d-flex align-items-center flex-direction-column'>
+                    <div className='d-flex align-items-center flex-direction-column' style={{ position: 'relative' }}>
+                      <div id="mapCard" style={{ position: 'absolute', display: isShowCard, top: 180, border: "2px solid black", zIndex: 100, background: 'white' }}>
+                        <div style={{ padding: 20 }}>
+                          <img alt="background" src={'./img/main/' + maplink + '.png'}></img>
+                        </div>
+                        <div style={{ padding: '0 20px 20px 20px', }}>
+                          <article style={{ padding: 0, maxWidth: 455 }}>
+                            <header style={{
+                              fontFamily: 'Open Sans',
+                              fontStyle: 'normal',
+                              fontWeight: 400,
+                              fontSize: 28,
+                              lineHeight: '44px',
+                            }}>{mapheader}</header>
+                            <p style={{
+                              fontFamily: 'Open Sans',
+                              fontStyle: 'normal',
+                              fontWeight: 400,
+                              fontSize: 16,
+                              lineHeight: '22px',
+                              marginTop: 9,
+                              marginBottom: 0
+                            }}>{maptext}</p>
+                          </article>
+                        </div>
+                      </div>
                       <img
                         alt='background'
                         id='map'
                         src='./img/main/main_eight_slide_img_2.svg'
                       ></img>
-                      <img alt='dot' style={{
+                      <img onClick={() => { showCard('argentina') }} alt='dot' style={{
 
-                        left: -260,
-                        top: -180
+                        left: 355,
+                        top: 570
                       }} src='./img/main/dot.svg' className='dot'></img>
-                      <img style={{
+                      <img onClick={() => { showCard('italy') }} style={{
 
-                        right: -13,
-                        top: -515
+                        left: 630,
+                        top: 255
                       }} alt='dot' src='./img/main/dot.svg' className='dot'></img>
-                      <img style={{
+                      <img onClick={() => { showCard('mongolia') }} style={{
 
-                        left: 250,
-                        top: -455
+                        left: 950,
+                        top: 250
                       }} alt='dot' src='./img/main/dot.svg' className='dot'></img>
-                      <img style={{
+                      <img onClick={() => { showCard('india') }} style={{
 
-                        left: 350,
-                        top: -520
+                        left: 870,
+                        top: 345
                       }} alt='dot' src='./img/main/dot.svg' className='dot'></img>
-                      <img style={{
+                      <img onClick={() => { showCard('indonesia') }} style={{
 
-                        left: 350,
-                        top: -394
+                        left: 970,
+                        top: 440
                       }} alt='dot' src='./img/main/dot.svg' className='dot'></img>
                       <div>
-                        <button className='btn-primary' onClick={() => { moveTo('/collection') }} style={{marginBottom: 100, marginLeft: 165}}> See photo</button>
+                        <button className='btn-primary' onClick={() => { moveTo('/collection') }} style={{ marginBottom: 100, marginLeft: 165 }}> See photo</button>
                       </div>
                     </div>
                     <div
@@ -1202,26 +1295,26 @@ export default function Main() {
                 style={{ gap: 30, justifyContent: "center" }}
               >
                 <BlogCard
-                link = 'india'
+                  link='india'
                   header='Adventure in India'
                   img='main_1.png'
                   text="Sometimes it's important to just relax not to think about what others think and do what you want."
                 />
                 <BlogCard
-                link = 'penguin'
+                  link='penguin'
                   img='main_2.png'
                   header='Friend penguin'
                   text='Animals love to have fun too. Let me prove it to you.'
                 />
                 <BlogCard
                   img='main_3.png'
-                  link = 'life'
+                  link='life'
                   header='Happiest is laughter'
                   text='Laughter will always help to get out of any situation. A sense of humor is definitely the most important thing in our life.'
                 />
                 <BlogCard
                   img='main_4.png'
-                  link = 'moment'
+                  link='moment'
                   header='Unexpected moments'
                   text='You can’t even guess how one white lady took and changed my day 180 degrees.'
                 />
@@ -1273,6 +1366,6 @@ export default function Main() {
         <Header position='left'></Header>
       </div>
 
-    </div>
+    </div >
   );
 }

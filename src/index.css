@@ -118,5 +118,5 @@ img {
 
 .dot{
   cursor: pointer;
-  position: relative;
+  position: absolute;
 }
